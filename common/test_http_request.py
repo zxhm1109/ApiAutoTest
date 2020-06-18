@@ -3,7 +3,7 @@ from ddt import ddt, data
 from common.HTTPrequest import Gettoken
 from common import HTTPrequest, DoExcel
 from common.path_os import file_path
-from common.Loggin import Mylog
+from common.logger import Mylog
 
 log=Mylog()
 sheetname = 'physicalexam'
