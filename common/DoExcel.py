@@ -3,8 +3,8 @@ import json
 from common.DoConfig import ReadConfig
 from common.logger import Mylog
 
-log=Mylog()
-res=ReadConfig.read_config_options_value('MODE')
+log = Mylog()
+res = ReadConfig.read_config_options_value('MODE')
 host = ReadConfig.read_config('HOST', 'host')
 
 
@@ -20,7 +20,7 @@ class doexcel:
             sheet = wb[sheet1]
 
             for i in range(2, sheet.max_row + 1):
-                if sheet.cell(i,2).value.lower() == 'y':
+                if sheet.cell(i, 2).value.lower() == 'y':
                     row_data = {}
                     row_data['caseid'] = sheet.cell(i, 1).value
                     row_data['sheetname'] = sheet1
@@ -38,12 +38,12 @@ class doexcel:
                         row_data['header'] = ''
                     else:
                         row_data['params'] = sheet.cell(i, 8).value
-                        row_data['header'] =sheet.cell(i,7).value
+                        row_data['header'] = sheet.cell(i, 7).value
 
                     test_case.append(row_data)
         return test_case
 
-    def write_excel(self, filepath, sheetname, row, value=None):
+    def write_excel(self, filepath, sheetname, row, col=10, value='None'):
         # 读取文件
         wb = load_workbook(filepath)
         # 打开excel表单
