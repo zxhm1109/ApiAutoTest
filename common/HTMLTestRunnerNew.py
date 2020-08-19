@@ -5,6 +5,7 @@
 # @File      : HTMLTestRunnerNew.py
 # @desc      :
 
+
 # coding=utf-8
 """
 A连接信息 TestRunner for use with the Python unit testing framework. It
@@ -173,9 +174,9 @@ class Template_mixin(object):
         2: '错误',
     }
 
-    DEFAULT_TITLE = 'Python12单元测试报告'
+    DEFAULT_TITLE = '自动化测试报告'
     DEFAULT_DESCRIPTION = ''
-    DEFAULT_TESTER = 'D调のSai'
+    DEFAULT_TESTER = 'zhaofy'
 
     # ------------------------------------------------------------------------
     # HTML Template
@@ -291,19 +292,21 @@ function html_escape(s) {
     STYLESHEET_TMPL = """
 <style type="text/css" media="screen">
 body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 120%; }
-table       { font-size: 100%; }
+table       { font-size: 100%;}
 /* -- heading ---------------------------------------------------------------------- */
 .heading {
     margin-top: 0ex;
     margin-bottom: 1ex;
 }
 .heading .description {
+
+
     margin-top: 4ex;
     margin-bottom: 6ex;
 }
 /* -- report ------------------------------------------------------------------------ */
 #total_row  { font-weight: bold; }
-.passCase   { color: #5cb85c; }
+.passCase   { color: #5cb85c; font-weight: bold; }
 .failCase   { color: #d9534f; font-weight: bold; }
 .errorCase  { color: #f0ad4e; font-weight: bold; }
 .hiddenRow  { display: none; }
@@ -329,7 +332,7 @@ table       { font-size: 100%; }
     # Report
     #
     # 汉化,加美化效果 --Findyou
-    REPORT_TMPL = """
+    REPORT_TMPL: str = """
 <p id='show_detail_line'>
 <a class="btn btn-primary" href='javascript:showCase(0)'>概要：%(passrate)s </a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败：%(fail)s </a>
@@ -345,7 +348,7 @@ table       { font-size: 100%; }
 <col align='right' />
 <col align='right' />
 </colgroup>
-<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 16px;">
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 16px; ">
     <td>用例集/测试用例</td>
     <td>总计</td>
     <td>通过</td>
@@ -381,12 +384,14 @@ table       { font-size: 100%; }
 <tr id='%(tid)s' class='%(Class)s'>
     <td class='%(style)s'><div class='testcase'>%(desc)s</div></td>
     <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
+    <!--默认收起错误信息 -Findyou -->
     <button id='btn_%(tid)s' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_%(tid)s'>%(status)s</button>
-    <div id='div_%(tid)s' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_%(tid)s' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_%(tid)s'>%(status)s</button>
-    <div id='div_%(tid)s' class="collapse in" align="left">
+    <div id='div_%(tid)s' class="collapse">  
+
+    # <!-- 默认展开错误信息 -Findyou 
+    # <button id='btn_%(tid)s' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_%(tid)s'>%(status)s</button>
+    # <div id='div_%(tid)s' class="collapse in" align="left"> -->
+    
     <pre>
     %(script)s
     </pre>
@@ -396,12 +401,30 @@ table       { font-size: 100%; }
 """  # variables: (tid, Class, style, desc, status)
 
     # 通过 的样式，加标签效果  -Findyou
+    # 修改后通过用例展示样式（与错误样式一样，可展开详情）
     REPORT_TEST_NO_OUTPUT_TMPL = r"""
 <tr id='%(tid)s' class='%(Class)s'>
     <td class='%(style)s'><div class='testcase'>%(desc)s</div></td>
-    <td colspan='5' align='center'><span class="label label-success success">%(status)s</span></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou-->
+    <button id='btn_%(tid)s' type="button"  class="label label-success success" data-toggle="collapse" data-target='#div_%(tid)s'>%(status)s</button>
+    <div id='div_%(tid)s' class="collapse">
+
+    <pre>
+    %(script)s
+    </pre>
+    </div>
+    </td>
 </tr>
-"""  # variables: (tid, Class, style, desc, status)
+"""
+
+    # 原版通过用例展示样式
+    # REPORT_TEST_NO_OUTPUT_TMPL = r"""
+    # <tr id='%(tid)s' class='%(Class)s'>
+    #     <td class='%(style)s'><div class='testcase'>%(desc)s</div></td>
+    #     <td colspan='5' align='center'><span class="label label-success success">%(status)s</span></td>
+    # </tr>
+    # """  # variables: (tid, Class, style, desc, status)
 
     REPORT_TEST_OUTPUT_TMPL = r"""
 %(id)s: %(output)s
@@ -449,6 +472,7 @@ class _TestResult(TestResult):
         self.passrate = float(0)
 
     def startTest(self, test):
+
         print("{0} - Start Test:{1}".format(time.asctime(), str(test)))
         TestResult.startTest(self, test)
         # just one buffer for both stdout and stderr
@@ -479,16 +503,20 @@ class _TestResult(TestResult):
         self.complete_output()
 
     def addSuccess(self, test):
+        from common.DoConfig import rw_demo_conf
+        cccc = '_'.join(str(test).split(' ')[0].split('_')[3:])
+        ccc = rw_demo_conf().get_demo_dict(cccc)
         self.success_count += 1
         TestResult.addSuccess(self, test)
         output = self.complete_output()
-        self.result.append((0, test, output, ''))
+        self.result.append((0, test, output, ccc))
         if self.verbosity > 1:
             sys.stderr.write('ok ')
             sys.stderr.write(str(test))
             sys.stderr.write('\n')
         else:
             sys.stderr.write('.')
+            sys.stderr.write('\n')
 
     def addError(self, test, err):
         self.error_count += 1
@@ -502,6 +530,7 @@ class _TestResult(TestResult):
             sys.stderr.write('\n')
         else:
             sys.stderr.write('E列表')
+            sys.stderr.write('\n')
 
     def addFailure(self, test, err):
         self.failure_count += 1
@@ -515,6 +544,7 @@ class _TestResult(TestResult):
             sys.stderr.write('\n')
         else:
             sys.stderr.write('F')
+            sys.stderr.write('\n')
 
 
 class HTMLTestRunner(Template_mixin):
@@ -585,7 +615,7 @@ class HTMLTestRunner(Template_mixin):
             ('测试人员', self.tester),
             ('开始时间', startTime),
             ('合计耗时', duration),
-            ('测试结果', status + "，通过率= " + self.passrate),
+            ('测试结果', status + "，通过率 " + self.passrate),
         ]
 
     def generateReport(self, test, result):
@@ -673,15 +703,32 @@ class HTMLTestRunner(Template_mixin):
         return report
 
     def _generate_report_test(self, rows, cid, tid, n, t, o, e):
+        '''
+
+        :param rows:
+        :param cid:
+        :param tid:
+        :param n: 用例执行状态 0: '通过',1: '失败',2: '错误'
+        :param t:
+        :param o:
+        :param e:
+        :return:
+        '''
+
         # e.g. 'pt1.1', 'ft1.1', etc
-        has_output = bool(o or e)
+        # 原版
+        # has_output = bool(e)
+
+        # 根据用例执行status ，来展示不同style
+        has_output = True if n == 0 else False
         # ID修改点为下划线,支持Bootstrap折叠展开特效 - Findyou
         tid = (n == 0 and 'p' or 'f') + 't%s_%s' % (cid + 1, tid + 1)
         name = t.id().split('.')[-1]
         doc = t.shortDescription() or ""
         desc = doc and ('%s: %s' % (name, doc)) or name
-        tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL or self.REPORT_TEST_NO_OUTPUT_TMPL
 
+        # 修改：不管用例通过还是失败，都可展示详情
+        tmpl = self.REPORT_TEST_WITH_OUTPUT_TMPL if not has_output else self.REPORT_TEST_NO_OUTPUT_TMPL  # zhaofy
         # utf-8 支持中文 - Findyou
         # o and e should be byte string because they are collected from stdout and stderr?
         if isinstance(o, str):
@@ -701,7 +748,7 @@ class HTMLTestRunner(Template_mixin):
 
         script = self.REPORT_TEST_OUTPUT_TMPL % dict(
             id=tid,
-            output=saxutils.escape(uo + ue),
+            output=saxutils.escape(str(uo) + str(ue)),
         )
 
         row = tmpl % dict(
@@ -712,6 +759,7 @@ class HTMLTestRunner(Template_mixin):
             script=script,
             status=self.STATUS[n],
         )
+        # print(row)
         rows.append(row)
         if not has_output:
             return
