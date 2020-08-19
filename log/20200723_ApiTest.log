@@ -1,0 +1,218 @@
+2020-07-23 10:40:50,813 DoExcel.py[line:16] INFO-> 读取用例
+2020-07-23 10:41:32,358 DoExcel.py[line:16] INFO-> 读取用例
+2020-07-23 16:00:42,588 DoExcel.py[line:66] ERROR-> 读取用例sheetname不是list也不是str
+2020-07-23 16:02:15,129 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:03:07,372 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:03:15,916 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:03:23,098 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:03:27,911 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:03:33,812 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:03:33,845 Run.py[line:13] INFO-> 111111
+2020-07-23 16:03:39,897 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:04:03,092 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:04:03,119 Run.py[line:16] INFO-> 111111
+2020-07-23 16:04:03,180 test_physicalexam_all.py[line:13] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '1', 'tag': '获取验证码', 'url': 'http://192.168.200.104:9900/api-uaa/validata/code/', 'method': 'get', 'header': 'application/x-www-form-urlencoded', 'params': '12321312asdadasda11111', 'response': None, 'expected': '0'}, {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.104:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{ 'Authorization': 'Basic d2ViQXBwOndlYkFwcA==', 'Content-Type': 'application/x-www-form-urlencoded'}", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.104:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:04:03,182 test_physicalexam_all.py[line:22] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:04:03,331 test_physicalexam_all.py[line:26] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:04:03,331 test_physicalexam_all.py[line:28] INFO-> 耗时：0:00:00.148959
+2020-07-23 16:04:03,333 test_physicalexam_all.py[line:22] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:04:03,348 test_physicalexam_all.py[line:26] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:04:03,348 test_physicalexam_all.py[line:28] INFO-> 耗时：0:00:00.014961
+2020-07-23 16:04:03,349 test_physicalexam_all.py[line:22] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:04:03,357 test_physicalexam_all.py[line:50] ERROR-> 用例执行出错：'0' != '1'
+- 0
++ 1
+
+2020-07-23 16:04:03,387 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:04:03,387 test_physicalexam_all.py[line:26] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:04:03,387 test_physicalexam_all.py[line:28] INFO-> 耗时：0:00:00.038892
+2020-07-23 16:04:16,144 To_Emil.py[line:36] INFO-> 邮件发送成功
+2020-07-23 16:05:22,805 test_physicalexam_all.py[line:13] INFO-> 测试用例数据--->:None
+2020-07-23 16:06:36,636 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:06:36,660 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '1', 'tag': '获取验证码', 'url': 'http://192.168.200.104:9900/api-uaa/validata/code/', 'method': 'get', 'header': 'application/x-www-form-urlencoded', 'params': '12321312asdadasda11111', 'response': None, 'expected': '0'}, {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.104:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{ 'Authorization': 'Basic d2ViQXBwOndlYkFwcA==', 'Content-Type': 'application/x-www-form-urlencoded'}", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.104:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:06:36,662 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:06:36,822 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:06:36,822 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.159052
+2020-07-23 16:06:36,827 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:06:36,840 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:06:36,840 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.012965
+2020-07-23 16:06:36,842 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:06:36,849 test_physicalexam_all.py[line:52] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:06:36,877 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:06:36,878 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:06:36,878 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.035904
+2020-07-23 16:08:37,406 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:08:37,435 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '1', 'tag': '获取验证码', 'url': 'http://192.168.200.104:9900/api-uaa/validata/code/', 'method': 'get', 'header': 'application/x-www-form-urlencoded', 'params': '12321312asdadasda11111', 'response': None, 'expected': '0'}, {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.104:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{ 'Authorization': 'Basic d2ViQXBwOndlYkFwcA==', 'Content-Type': 'application/x-www-form-urlencoded'}", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.104:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:08:37,436 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:08:37,590 test_physicalexam_all.py[line:48] INFO-> {'timestamp': '2020-07-23 16:08:36', 'status': 404, 'error': 'Not Found', 'message': 'No message available', 'path': '/validata/code/'}
+2020-07-23 16:08:37,590 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:08:37,591 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.154589
+2020-07-23 16:08:37,593 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:08:37,605 test_physicalexam_all.py[line:48] INFO-> {'timestamp': '2020-07-23 16:08:36', 'status': 404, 'error': 'Not Found', 'message': 'No message available', 'path': '/oauth/user/token'}
+2020-07-23 16:08:37,606 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:08:37,606 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.012954
+2020-07-23 16:08:37,607 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:08:37,614 test_physicalexam_all.py[line:48] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:08:37,615 test_physicalexam_all.py[line:53] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:08:37,652 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:08:37,652 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:08:37,652 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.044849
+2020-07-23 16:09:24,071 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:09:24,098 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '1', 'tag': '获取验证码', 'url': 'http://192.168.200.203:9900/api-uaa/validata/code/', 'method': 'get', 'header': 'application/x-www-form-urlencoded', 'params': '12321312asdadasda11111', 'response': None, 'expected': '0'}, {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{ 'Authorization': 'Basic d2ViQXBwOndlYkFwcA==', 'Content-Type': 'application/x-www-form-urlencoded'}", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:09:24,099 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:09:24,466 test_physicalexam_all.py[line:48] INFO-> {'timestamp': '2020-07-23 16:09:23', 'status': 404, 'error': 'Not Found', 'message': 'No message available', 'path': '/validata/code/'}
+2020-07-23 16:09:24,466 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:09:24,466 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.366164
+2020-07-23 16:09:24,469 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:09:24,523 test_physicalexam_all.py[line:48] INFO-> {'timestamp': '2020-07-23 16:09:23', 'status': 404, 'error': 'Not Found', 'message': 'No message available', 'path': '/oauth/user/token'}
+2020-07-23 16:09:24,524 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:09:24,524 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.054853
+2020-07-23 16:09:24,525 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:09:24,572 test_physicalexam_all.py[line:48] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:09:24,573 test_physicalexam_all.py[line:53] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:09:24,601 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:09:24,601 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:09:24,602 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.077052
+2020-07-23 16:11:24,869 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:11:24,901 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '1', 'tag': '获取验证码', 'url': 'http://192.168.200.203:9900/api-uaa/validata/code/12321312asdadasda11111', 'method': 'get', 'header': 'application/x-www-form-urlencoded', 'params': None, 'response': None, 'expected': '0'}, {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{ 'Authorization': 'Basic d2ViQXBwOndlYkFwcA==', 'Content-Type': 'application/x-www-form-urlencoded'}", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:11:24,903 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:11:25,060 HTTPrequest.py[line:34] ERROR-> 请求异常：Expecting value: line 1 column 1 (char 0)
+2020-07-23 16:11:25,060 test_physicalexam_all.py[line:48] INFO-> None
+2020-07-23 16:11:25,060 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:11:25,060 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.157579
+2020-07-23 16:11:25,064 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:11:25,099 test_physicalexam_all.py[line:48] INFO-> {'timestamp': '2020-07-23 16:11:23', 'status': 404, 'error': 'Not Found', 'message': 'No message available', 'path': '/oauth/user/token'}
+2020-07-23 16:11:25,099 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:11:25,099 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.034907
+2020-07-23 16:11:25,102 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:11:25,114 test_physicalexam_all.py[line:48] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:11:25,114 test_physicalexam_all.py[line:53] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:11:25,148 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:11:25,148 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:11:25,148 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.045879
+2020-07-23 16:12:04,724 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:12:04,762 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '1', 'tag': '获取验证码', 'url': 'http://192.168.200.203:9900/api-uaa/validata/code/12321312asdadasda11111', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}, {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{ 'Authorization': 'Basic d2ViQXBwOndlYkFwcA==', 'Content-Type': 'application/x-www-form-urlencoded'}", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:12:04,763 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:12:04,882 HTTPrequest.py[line:34] ERROR-> 请求异常：Expecting value: line 1 column 1 (char 0)
+2020-07-23 16:12:04,882 test_physicalexam_all.py[line:48] INFO-> None
+2020-07-23 16:12:04,882 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:12:04,882 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.119680
+2020-07-23 16:12:04,885 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:12:04,906 test_physicalexam_all.py[line:48] INFO-> {'timestamp': '2020-07-23 16:12:03', 'status': 404, 'error': 'Not Found', 'message': 'No message available', 'path': '/oauth/user/token'}
+2020-07-23 16:12:04,906 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:12:04,906 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.020944
+2020-07-23 16:12:04,908 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:12:04,917 test_physicalexam_all.py[line:48] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:12:04,917 test_physicalexam_all.py[line:53] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:12:04,945 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:12:04,946 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:12:04,946 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.037894
+2020-07-23 16:14:06,182 HTTPrequest.py[line:34] ERROR-> 请求异常：Expecting value: line 1 column 1 (char 0)
+2020-07-23 16:16:58,403 HTTPrequest.py[line:33] ERROR-> 请求异常：Expecting value: line 1 column 1 (char 0)
+2020-07-23 16:19:06,213 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:19:06,239 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '1', 'tag': '获取验证码', 'url': 'http://192.168.200.203:9900/api-uaa/validata/code/12321312asdadasda11111', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}, {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{ 'Authorization': 'Basic d2ViQXBwOndlYkFwcA==', 'Content-Type': 'application/x-www-form-urlencoded'}", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:19:06,240 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:19:06,347 HTTPrequest.py[line:34] ERROR-> 请求异常：Expecting value: line 1 column 1 (char 0)
+2020-07-23 16:19:06,348 test_physicalexam_all.py[line:48] INFO-> None
+2020-07-23 16:19:06,348 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:19:06,348 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.107684
+2020-07-23 16:19:06,351 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:19:06,377 test_physicalexam_all.py[line:48] INFO-> {'timestamp': '2020-07-23 16:19:04', 'status': 404, 'error': 'Not Found', 'message': 'No message available', 'path': '/oauth/user/token'}
+2020-07-23 16:19:06,377 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:19:06,377 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.025929
+2020-07-23 16:19:06,379 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:19:06,390 test_physicalexam_all.py[line:48] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:19:06,390 test_physicalexam_all.py[line:53] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:19:06,420 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:19:06,420 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:19:06,421 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.040888
+2020-07-23 16:31:26,171 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:31:26,196 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{\n  'Authorization': 'Basic d2ViQXBwOndlYkFwcA==',\n  'Content-Type': 'application/x-www-form-urlencoded'\n}\n", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:31:26,198 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:31:26,201 HTTPrequest.py[line:34] ERROR-> 请求异常：Invalid return character or leading space in header: Content-Type
+2020-07-23 16:31:26,201 test_physicalexam_all.py[line:48] INFO-> None
+2020-07-23 16:31:26,202 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:31:26,202 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.003951
+2020-07-23 16:31:26,204 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:31:26,274 test_physicalexam_all.py[line:48] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:31:26,275 test_physicalexam_all.py[line:53] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:31:26,300 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:31:26,301 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:31:26,301 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.095777
+2020-07-23 16:32:18,730 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:32:18,755 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{\n  'Authorization': 'Basic d2ViQXBwOndlYkFwcA==',\n  'Content-Type': 'application/x-www-form-urlencoded'\n}\n", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:32:18,756 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:32:18,757 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:32:18,757 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.001003
+2020-07-23 16:32:18,759 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:32:18,760 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:32:18,760 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.001031
+2020-07-23 16:32:42,148 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:32:42,177 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/user/token', 'method': 'post', 'header': "{\n  'Authorization': 'Basic d2ViQXBwOndlYkFwcA==',\n  'Content-Type': 'application/x-www-form-urlencoded'\n}\n", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:32:42,178 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:32:42,180 HTTPrequest.py[line:33] ERROR-> 请求异常：'str' object has no attribute 'items'
+2020-07-23 16:32:42,181 test_physicalexam_all.py[line:44] INFO-> None
+2020-07-23 16:32:42,181 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:32:42,181 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.002999
+2020-07-23 16:32:42,183 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:32:42,213 test_physicalexam_all.py[line:44] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:32:42,213 test_physicalexam_all.py[line:49] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:32:42,240 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:32:42,240 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:32:42,240 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.056847
+2020-07-23 16:36:03,205 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:36:03,239 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/token', 'method': 'post', 'header': "{\n  'Authorization': 'Basic d2ViQXBwOndlYkFwcA==',\n  'Content-Type': 'application/x-www-form-urlencoded'\n}\n", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111&grant_type=password_code', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:36:03,240 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:36:03,243 HTTPrequest.py[line:33] ERROR-> 请求异常：'str' object has no attribute 'items'
+2020-07-23 16:36:03,243 test_physicalexam_all.py[line:44] INFO-> None
+2020-07-23 16:36:03,243 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:36:03,243 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.002993
+2020-07-23 16:36:03,246 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:36:03,313 test_physicalexam_all.py[line:44] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:36:03,314 test_physicalexam_all.py[line:49] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:36:03,341 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:36:03,341 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:36:03,341 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.094743
+2020-07-23 16:37:08,852 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:37:08,883 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/token', 'method': 'post', 'header': "{\n  'Authorization': 'Basic d2ViQXBwOndlYkFwcA==',\n  'Content-Type': 'application/x-www-form-urlencoded'\n}\n", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111&grant_type=password_code', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:37:08,884 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:37:08,885 test_physicalexam_all.py[line:34] INFO-> {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/token', 'method': 'post', 'header': "{\n  'Authorization': 'Basic d2ViQXBwOndlYkFwcA==',\n  'Content-Type': 'application/x-www-form-urlencoded'\n}\n", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111&grant_type=password_code', 'response': 'access_token', 'expected': '0'}
+2020-07-23 16:37:08,887 HTTPrequest.py[line:33] ERROR-> 请求异常：'str' object has no attribute 'items'
+2020-07-23 16:37:08,887 test_physicalexam_all.py[line:45] INFO-> None
+2020-07-23 16:37:08,887 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:37:08,888 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.002993
+2020-07-23 16:37:08,890 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:37:08,891 test_physicalexam_all.py[line:34] INFO-> {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}
+2020-07-23 16:37:08,926 test_physicalexam_all.py[line:45] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:37:08,926 test_physicalexam_all.py[line:50] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:37:08,952 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:37:08,952 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:37:08,952 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.060838
+2020-07-23 16:38:13,704 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:38:13,747 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/token', 'method': 'post', 'header': "{\n  'Authorization': 'Basic d2ViQXBwOndlYkFwcA==',\n  'Content-Type': 'application/x-www-form-urlencoded'\n}\n", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111&grant_type=password_code', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:38:13,748 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:38:13,748 test_physicalexam_all.py[line:34] INFO-> {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/token', 'method': 'post', 'header': "{\n  'Authorization': 'Basic d2ViQXBwOndlYkFwcA==',\n  'Content-Type': 'application/x-www-form-urlencoded'\n}\n", 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111&grant_type=password_code', 'response': 'access_token', 'expected': '0'}
+2020-07-23 16:38:13,751 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:38:13,751 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.002990
+2020-07-23 16:38:13,759 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:38:13,759 test_physicalexam_all.py[line:34] INFO-> {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': None, 'params': None, 'response': None, 'expected': '0'}
+2020-07-23 16:38:13,772 test_physicalexam_all.py[line:45] INFO-> {'resp_code': 1, 'resp_msg': 'Not Authenticated'}
+2020-07-23 16:38:13,773 test_physicalexam_all.py[line:50] ERROR-> 用例执行出错： :: 0 != 1
+2020-07-23 16:38:13,812 DoExcel.py[line:82] ERROR-> 用例执行结果写入失败，如已打开请关闭！
+2020-07-23 16:38:13,812 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:38:13,813 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.053857
+2020-07-23 16:40:16,193 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:42:38,244 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:42:52,883 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:42:52,916 test_physicalexam_all.py[line:15] INFO-> 测试用例数据--->:[{'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/token', 'method': 'post', 'header': '"{\\n  \'Authorization\': \'Basic d2ViQXBwOndlYkFwcA==\',\\n  \'Content-Type\': \'application/x-www-form-urlencoded\'\\n}\\n"', 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111&grant_type=password_code', 'response': 'access_token', 'expected': '0'}, {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': 'null', 'params': None, 'response': None, 'expected': '0'}]
+2020-07-23 16:42:52,918 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:42:52,918 test_physicalexam_all.py[line:34] INFO-> {'sheetname': 'uaa', 'caseid': '2', 'tag': '登录', 'url': 'http://192.168.200.203:9900/api-uaa/oauth/token', 'method': 'post', 'header': '"{\\n  \'Authorization\': \'Basic d2ViQXBwOndlYkFwcA==\',\\n  \'Content-Type\': \'application/x-www-form-urlencoded\'\\n}\\n"', 'params': 'username=user&password=123456&validCode=pyqg&deviceId=12321312asdadasda11111&grant_type=password_code', 'response': 'access_token', 'expected': '0'}
+2020-07-23 16:42:52,921 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:42:52,921 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00.002992
+2020-07-23 16:42:52,926 test_physicalexam_all.py[line:24] INFO-> ---------------开始执行用例-------------------
+2020-07-23 16:42:52,927 test_physicalexam_all.py[line:34] INFO-> {'sheetname': 'product', 'caseid': '5', 'tag': '根据ID获取分类信息', 'url': 'http://192.168.200.203:9900/api-product-admin/category/id/100202003', 'method': 'get', 'header': 'null', 'params': None, 'response': None, 'expected': '0'}
+2020-07-23 16:42:52,927 test_physicalexam_all.py[line:28] INFO-> ---------------用例执行结束-------------------
+2020-07-23 16:42:52,927 test_physicalexam_all.py[line:30] INFO-> 耗时：0:00:00
+2020-07-23 16:43:46,532 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:44:07,657 DoExcel.py[line:16] INFO-> 读取测试用例
+2020-07-23 16:44:36,623 DoExcel.py[line:16] INFO-> 读取测试用例

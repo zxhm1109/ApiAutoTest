@@ -1,0 +1,400 @@
+2020-07-30 10:36:34,467 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:36:34,469 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:36:34,470 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:36:34,472 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:36:34,474 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:36:34,474 DoExcel.py[line:123] INFO-> 读取Base数据:{'HOST': 'https://t2wxapi.sancell.top/', 'DeviceID': '123123123asdasd', 'user': 'user', 'password': '123456', 'LoginToken': 'Basic d2ViQXBwOndlYkFwcA=='}
+2020-07-30 10:36:34,539 TestHttpRequest.py[line:16] INFO-> 获取excel测试用例：[{'sheetname': 'login', 'caseid': 'login_1', 'tag': '账号密码登录', 'url': 'https://t2wxapi.sancell.top/ssxq//saas-back/b/auth/syslogin', 'method': 'post', 'header': {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"}', 'response': None, 'sql': None, 'expected': 'msg=增加成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '获取用户信息', 'url': 'https://t2wxapi.sancell.top/ssxq//saas-back/b/auth/getUserInfo', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_3', 'tag': '根据用户查询菜单权限列表', 'url': 'https://t2wxapi.sancell.top/ssxq//saas-back/b/menu/getMenuListByDutyId', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=成功!'}, {'sheetname': 'login', 'caseid': 'login_4', 'tag': '获取商品列表', 'url': 'https://t2wxapi.sancell.top/ssxq//ssxqAdmin/b/marti/list', 'method': 'get', 'header': None, 'params': 'limit=10&offset=0', 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '退出登录', 'url': 'https://t2wxapi.sancell.top/ssxq//saas-back/b/auth/logout', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=注销成功'}, {'sheetname': 'mini program', 'caseid': 'mini_01', 'tag': '获取验证码', 'url': 'https://t2wxapi.sancell.top/ssxq//ssxq/w/auth/pin', 'method': 'post', 'header': {'Content-Type': 'application/json', 'Cookie': 'saas.sid=s%3AfS3uGqOyAMxdrehy4gqGXNK1rzEWc6Dd.lN2bSv0a%2BP7fC1ynk4hUSPX1MawN%2Bg3mpwM8iQbM3G4', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{\n  "phone": "17621757807",\n  "pin_type": "login"\n}', 'response': None, 'sql': None, 'expected': 'ret=OK'}]
+2020-07-30 10:36:34,542 HTTPrequest.py[line:49] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top/ssxq//saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"} 
+2020-07-30 10:36:34,752 TestHttpRequest.py[line:38] INFO-> 返参：<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.14.1</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+
+2020-07-30 10:36:34,752 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.209743  
+
+2020-07-30 10:36:35,262 HTTPrequest.py[line:49] INFO-> TestCase:获取用户信息 Request url:https://t2wxapi.sancell.top/ssxq//saas-back/b/auth/getUserInfo, Parameters:None 
+2020-07-30 10:36:35,408 TestHttpRequest.py[line:38] INFO-> 返参：<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.14.1</center>
+</body>
+</html>
+
+2020-07-30 10:36:35,408 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.146140  
+
+2020-07-30 10:36:35,912 HTTPrequest.py[line:49] INFO-> TestCase:根据用户查询菜单权限列表 Request url:https://t2wxapi.sancell.top/ssxq//saas-back/b/menu/getMenuListByDutyId, Parameters:None 
+2020-07-30 10:36:36,066 TestHttpRequest.py[line:38] INFO-> 返参：<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.14.1</center>
+</body>
+</html>
+
+2020-07-30 10:36:36,066 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.153821  
+
+2020-07-30 10:36:36,568 HTTPrequest.py[line:49] INFO-> TestCase:获取商品列表 Request url:https://t2wxapi.sancell.top/ssxq//ssxqAdmin/b/marti/list, Parameters:limit=10&offset=0 
+2020-07-30 10:36:36,710 TestHttpRequest.py[line:38] INFO-> 返参：<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.14.1</center>
+</body>
+</html>
+
+2020-07-30 10:36:36,710 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.141988  
+
+2020-07-30 10:36:37,213 HTTPrequest.py[line:49] INFO-> TestCase:退出登录 Request url:https://t2wxapi.sancell.top/ssxq//saas-back/b/auth/logout, Parameters:None 
+2020-07-30 10:36:37,359 TestHttpRequest.py[line:38] INFO-> 返参：<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.14.1</center>
+</body>
+</html>
+
+2020-07-30 10:36:37,359 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.145491  
+
+2020-07-30 10:36:37,862 HTTPrequest.py[line:49] INFO-> TestCase:获取验证码 Request url:https://t2wxapi.sancell.top/ssxq//ssxq/w/auth/pin, Parameters:{
+  "phone": "17621757807",
+  "pin_type": "login"
+} 
+2020-07-30 10:36:38,011 TestHttpRequest.py[line:38] INFO-> 返参：<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.14.1</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+
+2020-07-30 10:36:38,012 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.149952  
+
+2020-07-30 10:37:55,971 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:37:55,973 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:37:55,975 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:37:55,977 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:37:55,978 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:37:55,978 DoExcel.py[line:123] INFO-> 读取Base数据:{'HOST': 'https://t2wxapi.sancell.top/', 'DeviceID': '123123123asdasd', 'user': 'user', 'password': '123456', 'LoginToken': 'Basic d2ViQXBwOndlYkFwcA=='}
+2020-07-30 10:37:56,043 TestHttpRequest.py[line:16] INFO-> 获取excel测试用例：[{'sheetname': 'login', 'caseid': 'login_1', 'tag': '账号密码登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/syslogin', 'method': 'post', 'header': {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"}', 'response': None, 'sql': None, 'expected': 'msg=增加成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '获取用户信息', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_3', 'tag': '根据用户查询菜单权限列表', 'url': 'https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=成功!'}, {'sheetname': 'login', 'caseid': 'login_4', 'tag': '获取商品列表', 'url': 'https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list', 'method': 'get', 'header': None, 'params': 'limit=10&offset=0', 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '退出登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/logout', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=注销成功'}, {'sheetname': 'mini program', 'caseid': 'mini_01', 'tag': '获取验证码', 'url': 'https://t2wxapi.sancell.top//ssxq/w/auth/pin', 'method': 'post', 'header': {'Content-Type': 'application/json', 'Cookie': 'saas.sid=s%3AfS3uGqOyAMxdrehy4gqGXNK1rzEWc6Dd.lN2bSv0a%2BP7fC1ynk4hUSPX1MawN%2Bg3mpwM8iQbM3G4', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{\n  "phone": "17621757807",\n  "pin_type": "login"\n}', 'response': None, 'sql': None, 'expected': 'ret=OK'}]
+2020-07-30 10:37:56,045 HTTPrequest.py[line:49] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"} 
+2020-07-30 10:37:56,303 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"plat":{"plat_id":"SSBM","plat_name":"三少变美","full_name":null,"plat_address":null,"plat_tel":null,"contact_name":null,"contact_phone_number":null,"contacter_email":null,"bank_account_name":null,"bank_account_no":null,"bank_account_open":null,"invoice_tax_no":null,"invoice_address":null,"invoice_phone_number":null,"finance_name":null,"finance_phone_number":null,"logo":"","status":"ENABLE","plat_type":"B"},"user":{"user_id":"SSBM","plat_id":"SSBM","user_name":"三少变美","user_avatar":null,"user_code":"SSBM","user_type":"B","user_role":"ADMIN","job_position":"管理员","phone_number":null,"email":null,"gender":null,"status":"ENABLE","openid":null,"nickname":null,"id_card":null,"note":null,"vip":null,"unionid":null,"account_id":null},"corp":{"corp_id":"SSBM","plat_id":"SSBM","code":"SSBM","name":"三少变美","type":"","status":"ENABLE","banner":null,"contact":"曹朱伟","phone_number":"18616358651","address":""},"duty":{"duty_id":"SSBM"},"plat_base_url":""},"ret":"OK","msg":"增加成功"}
+2020-07-30 10:37:56,303 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：增加成功 == 增加成功
+2020-07-30 10:37:56,341 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:37:56,341 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.295906  
+
+2020-07-30 10:37:56,842 HTTPrequest.py[line:49] INFO-> TestCase:获取用户信息 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo, Parameters:None 
+2020-07-30 10:37:56,981 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"active_user":{},"plat":{},"corp":{},"duty":{},"saas_host":"https://t2wxapi.sancell.top/saas-back/"},"ret":"OK","msg":"查询成功"}
+2020-07-30 10:37:56,981 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：查询成功 == 查询成功
+2020-07-30 10:37:57,013 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:37:57,013 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.171256  
+
+2020-07-30 10:37:57,514 HTTPrequest.py[line:49] INFO-> TestCase:根据用户查询菜单权限列表 Request url:https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId, Parameters:None 
+2020-07-30 10:37:57,650 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:37:57,650 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 成功! != 登录信息已失效, 请重新登录!
+2020-07-30 10:37:57,650 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.136373  
+
+2020-07-30 10:37:58,153 HTTPrequest.py[line:49] INFO-> TestCase:获取商品列表 Request url:https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list, Parameters:limit=10&offset=0 
+2020-07-30 10:37:58,314 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:37:58,314 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 查询成功 != 登录信息已失效, 请重新登录!
+2020-07-30 10:37:58,315 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.161706  
+
+2020-07-30 10:37:58,817 HTTPrequest.py[line:49] INFO-> TestCase:退出登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/logout, Parameters:None 
+2020-07-30 10:37:58,955 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"OK","msg":"注销成功"}
+2020-07-30 10:37:58,955 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：注销成功 == 注销成功
+2020-07-30 10:37:58,994 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:37:58,994 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.177096  
+
+2020-07-30 10:37:59,496 HTTPrequest.py[line:49] INFO-> TestCase:获取验证码 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{
+  "phone": "17621757807",
+  "pin_type": "login"
+} 
+2020-07-30 10:37:59,634 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"ver_code":"8888"},"ret":"OK","msg":"成功!"}
+2020-07-30 10:37:59,634 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> ret：OK == OK
+2020-07-30 10:37:59,665 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:37:59,665 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.170326  
+
+2020-07-30 10:44:37,784 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:44:37,787 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:44:37,789 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:44:37,791 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:44:37,794 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:44:37,794 DoExcel.py[line:123] INFO-> 读取Base数据:{'HOST': 'https://t2wxapi.sancell.top/', 'DeviceID': '123123123asdasd', 'user': 'user', 'password': '123456', 'LoginToken': 'Basic d2ViQXBwOndlYkFwcA=='}
+2020-07-30 10:44:37,857 TestHttpRequest.py[line:16] INFO-> 获取excel测试用例：[{'sheetname': 'login', 'caseid': 'login_1', 'tag': '账号密码登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/syslogin', 'method': 'post', 'header': {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"}', 'response': None, 'sql': None, 'expected': 'msg=增加成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '获取用户信息', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_3', 'tag': '根据用户查询菜单权限列表', 'url': 'https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=成功!'}, {'sheetname': 'login', 'caseid': 'login_4', 'tag': '获取商品列表', 'url': 'https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list', 'method': 'get', 'header': None, 'params': 'limit=10&offset=0', 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '退出登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/logout', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=注销成功'}, {'sheetname': 'mini program', 'caseid': 'mini_01', 'tag': '获取验证码', 'url': 'https://t2wxapi.sancell.top//ssxq/w/auth/pin', 'method': 'post', 'header': {'Content-Type': 'application/json', 'Cookie': 'saas.sid=s%3AfS3uGqOyAMxdrehy4gqGXNK1rzEWc6Dd.lN2bSv0a%2BP7fC1ynk4hUSPX1MawN%2Bg3mpwM8iQbM3G4', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{\n  "phone": "17621757807",\n  "pin_type": "login"\n}', 'response': None, 'sql': None, 'expected': 'ret=OK'}]
+2020-07-30 10:44:37,859 HTTPrequest.py[line:49] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"} 
+2020-07-30 10:44:45,158 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"plat":{"plat_id":"SSBM","plat_name":"三少变美","full_name":null,"plat_address":null,"plat_tel":null,"contact_name":null,"contact_phone_number":null,"contacter_email":null,"bank_account_name":null,"bank_account_no":null,"bank_account_open":null,"invoice_tax_no":null,"invoice_address":null,"invoice_phone_number":null,"finance_name":null,"finance_phone_number":null,"logo":"","status":"ENABLE","plat_type":"B"},"user":{"user_id":"SSBM","plat_id":"SSBM","user_name":"三少变美","user_avatar":null,"user_code":"SSBM","user_type":"B","user_role":"ADMIN","job_position":"管理员","phone_number":null,"email":null,"gender":null,"status":"ENABLE","openid":null,"nickname":null,"id_card":null,"note":null,"vip":null,"unionid":null,"account_id":null},"corp":{"corp_id":"SSBM","plat_id":"SSBM","code":"SSBM","name":"三少变美","type":"","status":"ENABLE","banner":null,"contact":"曹朱伟","phone_number":"18616358651","address":""},"duty":{"duty_id":"SSBM"},"plat_base_url":""},"ret":"OK","msg":"增加成功"}
+2020-07-30 10:44:45,158 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：增加成功 == 增加成功
+2020-07-30 10:44:45,189 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:44:45,189 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:07.330358  
+
+2020-07-30 10:44:45,690 HTTPrequest.py[line:49] INFO-> TestCase:获取用户信息 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo, Parameters:None 
+2020-07-30 10:44:45,829 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"active_user":{},"plat":{},"corp":{},"duty":{},"saas_host":"https://t2wxapi.sancell.top/saas-back/"},"ret":"OK","msg":"查询成功"}
+2020-07-30 10:44:45,829 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：查询成功 == 查询成功
+2020-07-30 10:44:45,863 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:44:45,864 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.173250  
+
+2020-07-30 10:44:46,364 HTTPrequest.py[line:49] INFO-> TestCase:根据用户查询菜单权限列表 Request url:https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId, Parameters:None 
+2020-07-30 10:44:46,501 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:44:46,501 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 成功! != 登录信息已失效, 请重新登录!
+2020-07-30 10:44:46,501 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.136645  
+
+2020-07-30 10:44:47,004 HTTPrequest.py[line:49] INFO-> TestCase:获取商品列表 Request url:https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list, Parameters:limit=10&offset=0 
+2020-07-30 10:44:47,143 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:44:47,143 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 查询成功 != 登录信息已失效, 请重新登录!
+2020-07-30 10:44:47,144 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.139963  
+
+2020-07-30 10:44:47,645 HTTPrequest.py[line:49] INFO-> TestCase:退出登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/logout, Parameters:None 
+2020-07-30 10:44:47,789 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"OK","msg":"注销成功"}
+2020-07-30 10:44:47,790 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：注销成功 == 注销成功
+2020-07-30 10:44:47,823 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:44:47,823 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.177689  
+
+2020-07-30 10:44:48,325 HTTPrequest.py[line:49] INFO-> TestCase:获取验证码 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{
+  "phone": "17621757807",
+  "pin_type": "login"
+} 
+2020-07-30 10:44:48,461 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"ver_code":"8888"},"ret":"OK","msg":"成功!"}
+2020-07-30 10:44:48,461 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> ret：OK == OK
+2020-07-30 10:44:48,493 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:44:48,493 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.168631  
+
+2020-07-30 10:50:35,535 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:50:35,537 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:50:35,539 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:50:35,540 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:50:35,541 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:50:35,541 DoExcel.py[line:123] INFO-> 读取Base数据:{'HOST': 'https://t2wxapi.sancell.top/', 'DeviceID': '123123123asdasd', 'user': 'user', 'password': '123456', 'LoginToken': 'Basic d2ViQXBwOndlYkFwcA=='}
+2020-07-30 10:50:35,607 TestHttpRequest.py[line:16] INFO-> 获取excel测试用例：[{'sheetname': 'login', 'caseid': 'login_1', 'tag': '账号密码登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/syslogin', 'method': 'post', 'header': {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"}', 'response': None, 'sql': None, 'expected': 'msg=增加成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '获取用户信息', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_3', 'tag': '根据用户查询菜单权限列表', 'url': 'https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=成功!'}, {'sheetname': 'login', 'caseid': 'login_4', 'tag': '获取商品列表', 'url': 'https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list', 'method': 'get', 'header': None, 'params': 'limit=10&offset=0', 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '退出登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/logout', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=注销成功'}, {'sheetname': 'mini program', 'caseid': 'mini_01', 'tag': '获取验证码', 'url': 'https://t2wxapi.sancell.top//ssxq/w/auth/pin', 'method': 'post', 'header': {'Content-Type': 'application/json', 'Cookie': 'saas.sid=s%3AfS3uGqOyAMxdrehy4gqGXNK1rzEWc6Dd.lN2bSv0a%2BP7fC1ynk4hUSPX1MawN%2Bg3mpwM8iQbM3G4', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{\n  "phone": "17621757807",\n  "pin_type": "login"\n}', 'response': None, 'sql': None, 'expected': 'ret=OK'}]
+2020-07-30 10:50:35,609 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"},header:{'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'} 
+2020-07-30 10:50:35,851 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"plat":{"plat_id":"SSBM","plat_name":"三少变美","full_name":null,"plat_address":null,"plat_tel":null,"contact_name":null,"contact_phone_number":null,"contacter_email":null,"bank_account_name":null,"bank_account_no":null,"bank_account_open":null,"invoice_tax_no":null,"invoice_address":null,"invoice_phone_number":null,"finance_name":null,"finance_phone_number":null,"logo":"","status":"ENABLE","plat_type":"B"},"user":{"user_id":"SSBM","plat_id":"SSBM","user_name":"三少变美","user_avatar":null,"user_code":"SSBM","user_type":"B","user_role":"ADMIN","job_position":"管理员","phone_number":null,"email":null,"gender":null,"status":"ENABLE","openid":null,"nickname":null,"id_card":null,"note":null,"vip":null,"unionid":null,"account_id":null},"corp":{"corp_id":"SSBM","plat_id":"SSBM","code":"SSBM","name":"三少变美","type":"","status":"ENABLE","banner":null,"contact":"曹朱伟","phone_number":"18616358651","address":""},"duty":{"duty_id":"SSBM"},"plat_base_url":""},"ret":"OK","msg":"增加成功"}
+2020-07-30 10:50:35,851 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：增加成功 == 增加成功
+2020-07-30 10:50:35,888 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:50:35,888 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.278870  
+
+2020-07-30 10:50:36,388 HTTPrequest.py[line:50] INFO-> TestCase:获取用户信息 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo, Parameters:None,header:None 
+2020-07-30 10:50:36,529 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"active_user":{},"plat":{},"corp":{},"duty":{},"saas_host":"https://t2wxapi.sancell.top/saas-back/"},"ret":"OK","msg":"查询成功"}
+2020-07-30 10:50:36,529 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：查询成功 == 查询成功
+2020-07-30 10:50:36,560 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:50:36,561 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.172738  
+
+2020-07-30 10:50:37,061 HTTPrequest.py[line:50] INFO-> TestCase:根据用户查询菜单权限列表 Request url:https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId, Parameters:None,header:None 
+2020-07-30 10:50:37,198 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:50:37,198 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 成功! != 登录信息已失效, 请重新登录!
+2020-07-30 10:50:37,198 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.136983  
+
+2020-07-30 10:50:37,701 HTTPrequest.py[line:50] INFO-> TestCase:获取商品列表 Request url:https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list, Parameters:limit=10&offset=0,header:None 
+2020-07-30 10:50:37,841 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:50:37,842 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 查询成功 != 登录信息已失效, 请重新登录!
+2020-07-30 10:50:37,842 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.141191  
+
+2020-07-30 10:50:38,344 HTTPrequest.py[line:50] INFO-> TestCase:退出登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/logout, Parameters:None,header:None 
+2020-07-30 10:50:38,481 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"OK","msg":"注销成功"}
+2020-07-30 10:50:38,481 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：注销成功 == 注销成功
+2020-07-30 10:50:38,513 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:50:38,513 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.169626  
+
+2020-07-30 10:50:39,014 HTTPrequest.py[line:50] INFO-> TestCase:获取验证码 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{
+  "phone": "17621757807",
+  "pin_type": "login"
+},header:{'Content-Type': 'application/json', 'Cookie': 'saas.sid=s%3AfS3uGqOyAMxdrehy4gqGXNK1rzEWc6Dd.lN2bSv0a%2BP7fC1ynk4hUSPX1MawN%2Bg3mpwM8iQbM3G4', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'} 
+2020-07-30 10:50:39,172 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"ver_code":"8888"},"ret":"OK","msg":"成功!"}
+2020-07-30 10:50:39,172 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> ret：OK == OK
+2020-07-30 10:50:39,206 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:50:39,206 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.192654  
+
+2020-07-30 10:51:25,947 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:51:25,949 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:51:25,950 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:51:25,951 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:51:25,953 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:51:25,953 DoExcel.py[line:123] INFO-> 读取Base数据:{'HOST': 'https://t2wxapi.sancell.top/', 'DeviceID': '123123123asdasd', 'user': 'user', 'password': '123456', 'LoginToken': 'Basic d2ViQXBwOndlYkFwcA=='}
+2020-07-30 10:51:26,018 TestHttpRequest.py[line:16] INFO-> 获取excel测试用例：[{'sheetname': 'login', 'caseid': 'login_1', 'tag': '账号密码登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/syslogin', 'method': 'post', 'header': {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"}', 'response': None, 'sql': None, 'expected': 'msg=增加成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '获取用户信息', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_3', 'tag': '根据用户查询菜单权限列表', 'url': 'https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=成功!'}, {'sheetname': 'login', 'caseid': 'login_4', 'tag': '获取商品列表', 'url': 'https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list', 'method': 'get', 'header': None, 'params': 'limit=10&offset=0', 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '退出登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/logout', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=注销成功'}, {'sheetname': 'mini program', 'caseid': 'mini_01', 'tag': '获取验证码', 'url': 'https://t2wxapi.sancell.top//ssxq/w/auth/pin', 'method': 'post', 'header': {'Content-Type': 'application/json', 'Cookie': 'saas.sid=s%3AfS3uGqOyAMxdrehy4gqGXNK1rzEWc6Dd.lN2bSv0a%2BP7fC1ynk4hUSPX1MawN%2Bg3mpwM8iQbM3G4', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{\n  "phone": "17621757807",\n  "pin_type": "login"\n}', 'response': None, 'sql': None, 'expected': 'ret=OK'}]
+2020-07-30 10:51:26,020 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"},header:<class 'dict'> 
+2020-07-30 10:51:26,220 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"plat":{"plat_id":"SSBM","plat_name":"三少变美","full_name":null,"plat_address":null,"plat_tel":null,"contact_name":null,"contact_phone_number":null,"contacter_email":null,"bank_account_name":null,"bank_account_no":null,"bank_account_open":null,"invoice_tax_no":null,"invoice_address":null,"invoice_phone_number":null,"finance_name":null,"finance_phone_number":null,"logo":"","status":"ENABLE","plat_type":"B"},"user":{"user_id":"SSBM","plat_id":"SSBM","user_name":"三少变美","user_avatar":null,"user_code":"SSBM","user_type":"B","user_role":"ADMIN","job_position":"管理员","phone_number":null,"email":null,"gender":null,"status":"ENABLE","openid":null,"nickname":null,"id_card":null,"note":null,"vip":null,"unionid":null,"account_id":null},"corp":{"corp_id":"SSBM","plat_id":"SSBM","code":"SSBM","name":"三少变美","type":"","status":"ENABLE","banner":null,"contact":"曹朱伟","phone_number":"18616358651","address":""},"duty":{"duty_id":"SSBM"},"plat_base_url":""},"ret":"OK","msg":"增加成功"}
+2020-07-30 10:51:26,221 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：增加成功 == 增加成功
+2020-07-30 10:51:26,255 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:51:26,256 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.236049  
+
+2020-07-30 10:51:26,756 HTTPrequest.py[line:50] INFO-> TestCase:获取用户信息 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 10:51:26,893 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"active_user":{},"plat":{},"corp":{},"duty":{},"saas_host":"https://t2wxapi.sancell.top/saas-back/"},"ret":"OK","msg":"查询成功"}
+2020-07-30 10:51:26,894 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：查询成功 == 查询成功
+2020-07-30 10:51:26,926 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:51:26,926 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.170473  
+
+2020-07-30 10:51:27,428 HTTPrequest.py[line:50] INFO-> TestCase:根据用户查询菜单权限列表 Request url:https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 10:51:27,571 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:51:27,571 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 成功! != 登录信息已失效, 请重新登录!
+2020-07-30 10:51:27,571 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.142417  
+
+2020-07-30 10:51:28,073 HTTPrequest.py[line:50] INFO-> TestCase:获取商品列表 Request url:https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list, Parameters:limit=10&offset=0,header:<class 'NoneType'> 
+2020-07-30 10:51:28,209 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:51:28,209 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 查询成功 != 登录信息已失效, 请重新登录!
+2020-07-30 10:51:28,209 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.135562  
+
+2020-07-30 10:51:28,710 HTTPrequest.py[line:50] INFO-> TestCase:退出登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/logout, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 10:51:28,846 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"OK","msg":"注销成功"}
+2020-07-30 10:51:28,847 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：注销成功 == 注销成功
+2020-07-30 10:51:28,880 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:51:28,880 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.169454  
+
+2020-07-30 10:51:29,381 HTTPrequest.py[line:50] INFO-> TestCase:获取验证码 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{
+  "phone": "17621757807",
+  "pin_type": "login"
+},header:<class 'dict'> 
+2020-07-30 10:51:29,523 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"获取验证码过于频繁，请稍候再试"}
+2020-07-30 10:51:29,523 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> ret: OK != ERROR
+2020-07-30 10:51:29,524 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.142619  
+
+2020-07-30 10:58:04,446 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:58:04,448 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:58:04,449 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:58:04,451 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:58:04,452 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 10:58:04,452 DoExcel.py[line:123] INFO-> 读取Base数据:{'HOST': 'https://t2wxapi.sancell.top/', 'DeviceID': '123123123asdasd', 'user': 'user', 'password': '123456', 'LoginToken': 'Basic d2ViQXBwOndlYkFwcA=='}
+2020-07-30 10:58:04,524 TestHttpRequest.py[line:16] INFO-> 获取excel测试用例：[{'sheetname': 'login', 'caseid': 'login_1', 'tag': '账号密码登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/syslogin', 'method': 'post', 'header': {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"}', 'response': None, 'sql': None, 'expected': 'msg=增加成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '获取用户信息', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_3', 'tag': '根据用户查询菜单权限列表', 'url': 'https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=成功!'}, {'sheetname': 'login', 'caseid': 'login_4', 'tag': '获取商品列表', 'url': 'https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list', 'method': 'get', 'header': None, 'params': 'limit=10&offset=0', 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '退出登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/logout', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=注销成功'}, {'sheetname': 'mini program', 'caseid': 'mini_01', 'tag': '获取验证码', 'url': 'https://t2wxapi.sancell.top//ssxq/w/auth/pin', 'method': 'post', 'header': {'Content-Type': 'application/json', 'Cookie': 'saas.sid=s%3AfS3uGqOyAMxdrehy4gqGXNK1rzEWc6Dd.lN2bSv0a%2BP7fC1ynk4hUSPX1MawN%2Bg3mpwM8iQbM3G4', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{\n  "phone": "17621757807",\n  "pin_type": "login"\n}', 'response': None, 'sql': None, 'expected': 'ret=OK'}]
+2020-07-30 10:58:04,526 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"},header:<class 'dict'> 
+2020-07-30 10:58:04,658 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"plat":{"plat_id":"SSBM","plat_name":"三少变美","full_name":null,"plat_address":null,"plat_tel":null,"contact_name":null,"contact_phone_number":null,"contacter_email":null,"bank_account_name":null,"bank_account_no":null,"bank_account_open":null,"invoice_tax_no":null,"invoice_address":null,"invoice_phone_number":null,"finance_name":null,"finance_phone_number":null,"logo":"","status":"ENABLE","plat_type":"B"},"user":{"user_id":"SSBM","plat_id":"SSBM","user_name":"三少变美","user_avatar":null,"user_code":"SSBM","user_type":"B","user_role":"ADMIN","job_position":"管理员","phone_number":null,"email":null,"gender":null,"status":"ENABLE","openid":null,"nickname":null,"id_card":null,"note":null,"vip":null,"unionid":null,"account_id":null},"corp":{"corp_id":"SSBM","plat_id":"SSBM","code":"SSBM","name":"三少变美","type":"","status":"ENABLE","banner":null,"contact":"曹朱伟","phone_number":"18616358651","address":""},"duty":{"duty_id":"SSBM"},"plat_base_url":""},"ret":"OK","msg":"增加成功"}
+2020-07-30 10:58:04,658 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：增加成功 == 增加成功
+2020-07-30 10:58:04,692 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:58:04,692 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.166345  
+
+2020-07-30 10:58:05,193 HTTPrequest.py[line:50] INFO-> TestCase:获取用户信息 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 10:58:05,355 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"active_user":{},"plat":{},"corp":{},"duty":{},"saas_host":"https://t2wxapi.sancell.top/saas-back/"},"ret":"OK","msg":"查询成功"}
+2020-07-30 10:58:05,356 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：查询成功 == 查询成功
+2020-07-30 10:58:05,394 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:58:05,395 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.201797  
+
+2020-07-30 10:58:05,895 HTTPrequest.py[line:50] INFO-> TestCase:根据用户查询菜单权限列表 Request url:https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 10:58:06,032 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:58:06,032 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 成功! != 登录信息已失效, 请重新登录!
+2020-07-30 10:58:06,032 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.137065  
+
+2020-07-30 10:58:06,534 HTTPrequest.py[line:50] INFO-> TestCase:获取商品列表 Request url:https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list, Parameters:limit=10&offset=0,header:<class 'NoneType'> 
+2020-07-30 10:58:06,681 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"}
+2020-07-30 10:58:06,681 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 查询成功 != 登录信息已失效, 请重新登录!
+2020-07-30 10:58:06,682 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.147696  
+
+2020-07-30 10:58:07,183 HTTPrequest.py[line:50] INFO-> TestCase:退出登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/logout, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 10:58:07,320 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"OK","msg":"注销成功"}
+2020-07-30 10:58:07,320 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：注销成功 == 注销成功
+2020-07-30 10:58:07,356 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:58:07,356 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.172706  
+
+2020-07-30 10:58:07,856 HTTPrequest.py[line:50] INFO-> TestCase:获取验证码 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{
+  "phone": "17621757807",
+  "pin_type": "login"
+},header:<class 'dict'> 
+2020-07-30 10:58:07,912 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"ver_code":"8888"},"ret":"OK","msg":"成功!"}
+2020-07-30 10:58:07,912 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> ret：OK == OK
+2020-07-30 10:58:07,948 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 10:58:07,949 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.093042  
+
+2020-07-30 10:58:26,829 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://dev.kmlab.com/saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"130217c34e8cea4e772912b5851f3936","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"},header:<class 'dict'> 
+2020-07-30 10:58:53,712 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://dev.kmlab.com/saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"130217c34e8cea4e772912b5851f3936","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"},header:<class 'dict'> 
+2020-07-30 11:01:37,319 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{"phone": "17621757807","pin_type": "login"},header:<class 'dict'> 
+2020-07-30 11:01:48,380 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{'phone': '17621757807', 'pin_type': 'login'},header:<class 'dict'> 
+2020-07-30 11:02:54,679 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{'phone': '17621757807', 'pin_type': 'login'},header:<class 'dict'> 
+2020-07-30 11:03:06,479 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:03:06,480 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:03:06,482 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:03:06,483 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:03:06,485 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:03:06,485 DoExcel.py[line:123] INFO-> 读取Base数据:{'HOST': 'https://t2wxapi.sancell.top/', 'DeviceID': '123123123asdasd', 'user': 'user', 'password': '123456', 'LoginToken': 'Basic d2ViQXBwOndlYkFwcA=='}
+2020-07-30 11:03:06,547 TestHttpRequest.py[line:16] INFO-> 获取excel测试用例：[{'sheetname': 'login', 'caseid': 'login_1', 'tag': '账号密码登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/syslogin', 'method': 'post', 'header': {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"}', 'response': None, 'sql': None, 'expected': 'msg=增加成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '获取用户信息', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_3', 'tag': '根据用户查询菜单权限列表', 'url': 'https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=成功!'}, {'sheetname': 'login', 'caseid': 'login_4', 'tag': '获取商品列表', 'url': 'https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list', 'method': 'get', 'header': None, 'params': 'limit=10&offset=0', 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '退出登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/logout', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=注销成功'}, {'sheetname': 'mini program', 'caseid': 'mini_01', 'tag': '获取验证码', 'url': 'https://t2wxapi.sancell.top//ssxq/w/auth/pin', 'method': 'post', 'header': {'Content-Type': 'application/json', 'Cookie': 'saas.sid=s%3AfS3uGqOyAMxdrehy4gqGXNK1rzEWc6Dd.lN2bSv0a%2BP7fC1ynk4hUSPX1MawN%2Bg3mpwM8iQbM3G4', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{\n  "phone": "17621757807",\n  "pin_type": "login"\n}', 'response': None, 'sql': None, 'expected': 'ret=OK'}]
+2020-07-30 11:03:06,549 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"},header:<class 'dict'> 
+2020-07-30 11:03:06,796 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"plat":{"plat_id":"SSBM","plat_name":"三少变美","full_name":null,"plat_address":null,"plat_tel":null,"contact_name":null,"contact_phone_number":null,"contacter_email":null,"bank_account_name":null,"bank_account_no":null,"bank_account_open":null,"invoice_tax_no":null,"invoice_address":null,"invoice_phone_number":null,"finance_name":null,"finance_phone_number":null,"logo":"","status":"ENABLE","plat_type":"B"},"user":{"user_id":"SSBM","plat_id":"SSBM","user_name":"三少变美","user_avatar":null,"user_code":"SSBM","user_type":"B","user_role":"ADMIN","job_position":"管理员","phone_number":null,"email":null,"gender":null,"status":"ENABLE","openid":null,"nickname":null,"id_card":null,"note":null,"vip":null,"unionid":null,"account_id":null},"corp":{"corp_id":"SSBM","plat_id":"SSBM","code":"SSBM","name":"三少变美","type":"","status":"ENABLE","banner":null,"contact":"曹朱伟","phone_number":"18616358651","address":""},"duty":{"duty_id":"SSBM"},"plat_base_url":""},"ret":"OK","msg":"增加成功"},HTTPSTUTAS:200
+2020-07-30 11:03:06,796 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：增加成功 == 增加成功
+2020-07-30 11:03:06,833 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 11:03:06,834 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.285593  
+
+2020-07-30 11:03:07,335 HTTPrequest.py[line:50] INFO-> TestCase:获取用户信息 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 11:03:07,478 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"active_user":{},"plat":{},"corp":{},"duty":{},"saas_host":"https://t2wxapi.sancell.top/saas-back/"},"ret":"OK","msg":"查询成功"},HTTPSTUTAS:200
+2020-07-30 11:03:07,478 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：查询成功 == 查询成功
+2020-07-30 11:03:07,512 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 11:03:07,512 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.176614  
+
+2020-07-30 11:03:08,012 HTTPrequest.py[line:50] INFO-> TestCase:根据用户查询菜单权限列表 Request url:https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 11:03:08,146 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"},HTTPSTUTAS:401
+2020-07-30 11:03:08,147 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 成功! != 登录信息已失效, 请重新登录!
+2020-07-30 11:03:08,147 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.135048  
+
+2020-07-30 11:03:08,649 HTTPrequest.py[line:50] INFO-> TestCase:获取商品列表 Request url:https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list, Parameters:limit=10&offset=0,header:<class 'NoneType'> 
+2020-07-30 11:03:08,791 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"},HTTPSTUTAS:401
+2020-07-30 11:03:08,791 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 查询成功 != 登录信息已失效, 请重新登录!
+2020-07-30 11:03:08,791 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.141718  
+
+2020-07-30 11:03:09,292 HTTPrequest.py[line:50] INFO-> TestCase:退出登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/logout, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 11:03:09,433 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"OK","msg":"注销成功"},HTTPSTUTAS:200
+2020-07-30 11:03:09,433 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：注销成功 == 注销成功
+2020-07-30 11:03:09,469 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 11:03:09,470 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.177432  
+
+2020-07-30 11:03:09,970 HTTPrequest.py[line:50] INFO-> TestCase:获取验证码 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{
+  "phone": "17621757807",
+  "pin_type": "login"
+},header:<class 'dict'> 
+2020-07-30 11:03:10,106 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"ver_code":"8888"},"ret":"OK","msg":"成功!"},HTTPSTUTAS:200
+2020-07-30 11:03:10,106 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> ret：OK == OK
+2020-07-30 11:03:10,137 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 11:03:10,137 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.166362  
+
+2020-07-30 11:05:45,055 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:05:45,057 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:05:45,058 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:05:45,061 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:05:45,063 DoConfig.py[line:53] INFO-> Base 更新成功
+2020-07-30 11:05:45,064 DoExcel.py[line:123] INFO-> 读取Base数据:{'HOST': 'https://t2wxapi.sancell.top/', 'DeviceID': '123123123asdasd', 'user': 'user', 'password': '123456', 'LoginToken': 'Basic d2ViQXBwOndlYkFwcA=='}
+2020-07-30 11:05:45,131 TestHttpRequest.py[line:16] INFO-> 获取excel测试用例：[{'sheetname': 'login', 'caseid': 'login_1', 'tag': '账号密码登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/syslogin', 'method': 'post', 'header': {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"}', 'response': None, 'sql': None, 'expected': 'msg=增加成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '获取用户信息', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_3', 'tag': '根据用户查询菜单权限列表', 'url': 'https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=成功!'}, {'sheetname': 'login', 'caseid': 'login_4', 'tag': '获取商品列表', 'url': 'https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list', 'method': 'get', 'header': None, 'params': 'limit=10&offset=0', 'response': None, 'sql': None, 'expected': 'msg=查询成功'}, {'sheetname': 'login', 'caseid': 'login_2', 'tag': '退出登录', 'url': 'https://t2wxapi.sancell.top//saas-back/b/auth/logout', 'method': 'get', 'header': None, 'params': None, 'response': None, 'sql': None, 'expected': 'msg=注销成功'}, {'sheetname': 'mini program', 'caseid': 'mini_01', 'tag': '获取验证码', 'url': 'https://t2wxapi.sancell.top//ssxq/w/auth/pin', 'method': 'post', 'header': {'Content-Type': 'application/json', 'Cookie': 'saas.sid=s%3AfS3uGqOyAMxdrehy4gqGXNK1rzEWc6Dd.lN2bSv0a%2BP7fC1ynk4hUSPX1MawN%2Bg3mpwM8iQbM3G4', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}, 'params': '{\n  "phone": "17621757807",\n  "pin_type": "login"\n}', 'response': None, 'sql': None, 'expected': 'ret=OK'}]
+2020-07-30 11:05:45,139 HTTPrequest.py[line:50] INFO-> TestCase:账号密码登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/syslogin, Parameters:{"userCode":"SSBM","userPassword":"70390b2968cc6c25818ba324d48c0c5d","user_auto":"ENABLE","loginType":"PLAT","type":"JSON"},header:<class 'dict'> 
+2020-07-30 11:05:45,353 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"plat":{"plat_id":"SSBM","plat_name":"三少变美","full_name":null,"plat_address":null,"plat_tel":null,"contact_name":null,"contact_phone_number":null,"contacter_email":null,"bank_account_name":null,"bank_account_no":null,"bank_account_open":null,"invoice_tax_no":null,"invoice_address":null,"invoice_phone_number":null,"finance_name":null,"finance_phone_number":null,"logo":"","status":"ENABLE","plat_type":"B"},"user":{"user_id":"SSBM","plat_id":"SSBM","user_name":"三少变美","user_avatar":null,"user_code":"SSBM","user_type":"B","user_role":"ADMIN","job_position":"管理员","phone_number":null,"email":null,"gender":null,"status":"ENABLE","openid":null,"nickname":null,"id_card":null,"note":null,"vip":null,"unionid":null,"account_id":null},"corp":{"corp_id":"SSBM","plat_id":"SSBM","code":"SSBM","name":"三少变美","type":"","status":"ENABLE","banner":null,"contact":"曹朱伟","phone_number":"18616358651","address":""},"duty":{"duty_id":"SSBM"},"plat_base_url":""},"ret":"OK","msg":"增加成功"},HTTPSTUTAS:200
+2020-07-30 11:05:45,354 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：增加成功 == 增加成功
+2020-07-30 11:05:45,392 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 11:05:45,392 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.252354  
+
+2020-07-30 11:05:45,897 HTTPrequest.py[line:50] INFO-> TestCase:获取用户信息 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/getUserInfo, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 11:05:46,034 TestHttpRequest.py[line:38] INFO-> 返参：{"content":{"active_user":{},"plat":{},"corp":{},"duty":{},"saas_host":"https://t2wxapi.sancell.top/saas-back/"},"ret":"OK","msg":"查询成功"},HTTPSTUTAS:200
+2020-07-30 11:05:46,035 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：查询成功 == 查询成功
+2020-07-30 11:05:46,068 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 11:05:46,069 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.172200  
+
+2020-07-30 11:05:46,574 HTTPrequest.py[line:50] INFO-> TestCase:根据用户查询菜单权限列表 Request url:https://t2wxapi.sancell.top//saas-back/b/menu/getMenuListByDutyId, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 11:05:46,705 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"},HTTPSTUTAS:401
+2020-07-30 11:05:46,706 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 成功! != 登录信息已失效, 请重新登录!
+2020-07-30 11:05:46,709 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.135539  
+
+2020-07-30 11:05:47,213 HTTPrequest.py[line:50] INFO-> TestCase:获取商品列表 Request url:https://t2wxapi.sancell.top//ssxqAdmin/b/marti/list, Parameters:limit=10&offset=0,header:<class 'NoneType'> 
+2020-07-30 11:05:47,352 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"登录信息已失效, 请重新登录!"},HTTPSTUTAS:401
+2020-07-30 11:05:47,352 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> msg: 查询成功 != 登录信息已失效, 请重新登录!
+2020-07-30 11:05:47,353 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.140156  
+
+2020-07-30 11:05:47,856 HTTPrequest.py[line:50] INFO-> TestCase:退出登录 Request url:https://t2wxapi.sancell.top//saas-back/b/auth/logout, Parameters:None,header:<class 'NoneType'> 
+2020-07-30 11:05:47,987 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"OK","msg":"注销成功"},HTTPSTUTAS:200
+2020-07-30 11:05:47,988 TestHttpRequest.py[line:52] INFO-> 断言SUCCEED --> msg：注销成功 == 注销成功
+2020-07-30 11:05:48,023 DoExcel.py[line:79] ERROR-> 用例执行结果写入失败：[Errno 13] Permission denied: 'C:\\myworkfile\\py_package\\ApiAutoTest\\Data\\api_test_case.xlsx'
+2020-07-30 11:05:48,023 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.166793  
+
+2020-07-30 11:05:48,527 HTTPrequest.py[line:50] INFO-> TestCase:获取验证码 Request url:https://t2wxapi.sancell.top//ssxq/w/auth/pin, Parameters:{
+  "phone": "17621757807",
+  "pin_type": "login"
+},header:<class 'dict'> 
+2020-07-30 11:05:48,663 TestHttpRequest.py[line:38] INFO-> 返参：{"ret":"ERROR","msg":"获取验证码过于频繁，请稍候再试"},HTTPSTUTAS:200
+2020-07-30 11:05:48,663 TestHttpRequest.py[line:54] ERROR-> 断言FAILURE --> ret: OK != ERROR
+2020-07-30 11:05:48,667 TestHttpRequest.py[line:29] INFO-> 耗时：0:00:00.139870  
+
+2020-07-30 11:06:02,159 To_Emil.py[line:36] INFO-> 邮件发送成功
