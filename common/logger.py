@@ -1,75 +1,61 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author    : zhaofy
+# @Datetime  : 2020/11/9 14:10
+# @File      : logger.py
+# @desc      : 日志封装
 import logging
 from common.path_os import file_path
-import os, datetime, time
+from functools import wraps
 
 
-class Mylog(logging.Logger):
+class Mylog:
+    log_path = file_path().get_log_path()
 
-    def __init__(self,
-                 name="root",
-                 level="DEBUG",
-                 format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s-> %(message)s'
-                 ):
-        # logger(name) 直接超继承logger当中的name
-        super().__init__(name)
+    def __init__(self, logger):
+        '''
+            指定保存日志的文件路径，日志级别，以及调用文件
+            将日志存入到指定的文件中
+        '''
+        # 创建一个logger
+        self.logger = logging.getLogger(logger)
+        self.logger.setLevel(logging.DEBUG)
+        # 输出到文件
+        fh = logging.FileHandler(self.log_path, 'a', encoding='utf-8')
+        fh.setLevel(logging.INFO)
 
-        # 设置收集器级别
-        # logger.setLevel(level)
-        self.setLevel(level)  # 继承了Logger 返回的实例就是自己
+        # 输出到控制台
+        ch = logging.StreamHandler()
+        ch.setLevel(logging.INFO)
 
-        # 初始化format，设置格式
-        fmt = logging.Formatter(format)
+        # 定义handler的输出格式
+        formatter = logging.Formatter('%(asctime)s - %(name)s[line:%(lineno)d] - %(levelname)s : %(message)s')
+        fh.setFormatter(formatter)
+        ch.setFormatter(formatter)
 
-        # 初始化处理器
-        # 如果file为空，就执行stream_handler,如果有，两个都执行
+        # 给logger添加handler
+        self.logger.addHandler(fh)
+        self.logger.addHandler(ch)
 
-        file_handler = logging.FileHandler(file_path().get_log_path(), encoding='utf-8')
-        # 设置handler级别
-        file_handler.setLevel(level)
-        # 添加handler
-        self.addHandler(file_handler)
-        # 添加日志处理器
-        file_handler.setFormatter(fmt)
-
-        stream_handler = logging.StreamHandler()
-        stream_handler.setLevel(level)
-        self.addHandler(stream_handler)
-        stream_handler.setFormatter(fmt)
+    def getlog(self):
+        return self.logger
 
 
-def del_overdue_log_file(filepath):
-    nowtime = time.strftime('%Y%m%d')
-    logger = Mylog()
-    # 遍历文件夹下文件列表
-    for x, y, z in os.walk(filepath):
-        for i in z:
-            filetime = i.split('_')[0]
-
-            # 当前月份大于文件月份2个月及2个月以上时，清理文件
-            if (int(nowtime[4:6]) - int(filetime[4:6])) > 1:
-                os.remove(os.path.join(filepath, i))
-                logger.info('清理历史文件成功！')
-            # 当前月份大于文件月份1个月 且 当前日大于文件日时，清理文件
-            elif int(filetime[6:]) < int(nowtime[6:]) and (int(nowtime[4:6]) - int(filetime[4:6])) == 1:
-                os.remove(os.path.join(filepath, i))
-                logger.info('清理历史文件成功！')
-            else:
-                pass
+logger = Mylog('logger').getlog()
 
 
-def del_log_report():
-    log_file_path = os.path.join(os.path.abspath(os.path.dirname(__file__).split('ApiAutoTest')[0]), 'ApiAutoTest\log\\')
-    # 测试报告文件夹路径
-    report_file_path = os.path.join(os.path.abspath(os.path.dirname(__file__).split('ApiAutoTest')[0]), 'ApiAutoTest\\test_result\\')
-    del_overdue_log_file(log_file_path)
-    del_overdue_log_file(report_file_path)
+def loggermate(param):
+    def wrap(function):
+        @wraps(function)
+        def _wrap(*args, **kwargs):
+            logger.info("当前模块 {}".format(param))
+            logger.info("全部args参数参数信息 , {}".format(str(args)))
+            logger.info("全部kwargs参数信息 , {}".format(str(kwargs)))
+            return function(*args, **kwargs)
+        return _wrap
+    return wrap
 
 
 if __name__ == '__main__':
-    logger = Mylog()
+    logger = Mylog('logger').getlog()
     logger.debug("world")
-    # 日志文件夹路径
-    log_file_path = os.path.join(os.path.abspath(os.path.dirname(__file__).split('ApiAutoTest')[0]), 'ApiAutoTest\log\\')
-    # 测试报告文件夹路径
-    report_file_path = os.path.join(os.path.abspath(os.path.dirname(__file__).split('ApiAutoTest')[0]), 'ApiAutoTest\\test_report\\')
-    del_overdue_log_file(report_file_path)

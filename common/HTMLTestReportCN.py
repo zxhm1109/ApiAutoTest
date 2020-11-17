@@ -2,14 +2,21 @@
 """
 A TestRunner for use with the Python unit testing framework. It
 generates a HTML report to show the result at a glance.
+
 The simplest way to use this is to invoke its main method. E.g.
+
     import unittest
     import HTMLTestRunner
+
     ... define your tests ...
+
     if __name__ == '__main__':
         HTMLTestRunner.main()
+
+
 For more customization options, instantiates a HTMLTestRunner object.
 HTMLTestRunner is a counterpart to unittest's TextTestRunner. E.g.
+
     # output to a file
     fp = file('my_report.html', 'wb')
     runner = HTMLTestRunner.HTMLTestRunner(
@@ -17,17 +24,23 @@ HTMLTestRunner is a counterpart to unittest's TextTestRunner. E.g.
                 title='My unit test',
                 description='This demonstrates the report output by HTMLTestRunner.'
                 )
+
     # Use an external stylesheet.
     # See the Template_mixin class for more customizable options
     runner.STYLESHEET_TMPL = '<link rel="stylesheet" href="my_stylesheet.css" type="text/css">'
+
     # run the test
     runner.run(my_test_suite)
+
+
 ------------------------------------------------------------------------
 Copyright (c) 2004-2007, Wai Yip Tung
 All rights reserved.
+
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
 met:
+
 * Redistributions of source code must retain the above copyright notice,
   this list of conditions and the following disclaimer.
 * Redistributions in binary form must reproduce the above copyright
@@ -36,6 +49,7 @@ met:
 * Neither the name Wai Yip Tung nor the names of its contributors may be
   used to endorse or promote products derived from this software without
   specific prior written permission.
+
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
 IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
 TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
@@ -61,66 +75,89 @@ Version 1.3.0 -- Gelomen
 * 增加初始化报告目录自定义
 * 升级版本
 * 优化命名
+
 Version 1.2.0 -- Gelomen
 * 优化用例说明显示
 * 错误和失败报告里可以放入多张截图
+
 Version 1.1.0 -- Gelomen
 * 优化报告截图写入方式
+
 Version 1.0.2 -- Gelomen
 * 新增测试结果统计饼图
 * 优化筛选时只显示预览
+
 Version 1.0.1 -- Gelomen
 * 修复报告存入文件夹的bug
 * 优化报告的命名方式
+
 Version 1.0.0 -- Gelomen
 * 修改测试报告文件夹路径的获取方式
 * 修改截图获取文件夹路径的获取方式
+
 Version 0.9.9 -- Gelomen
 * 优化报告文件夹命名
 * 优化截图存放的目录
 * 增加图片阴影边框以突出图片
 * 优化 失败用例合集 和 错误用例合集 显示的颜色
+
 Version 0.9.8 -- Gelomen
 * 优化回到顶部按钮的显示方式
+
 Version 0.9.7 -- Gelomen
 * 优化截图显示，滚动页面会固定居中
+
 Version 0.9.6 -- Gelomen
 * 新增打开图片的特效，可以直接在当前页面看截图
+
 Version 0.9.5 -- Gelomen
 * heading新增 失败 和 错误 测试用例合集
+
 Version 0.9.4 -- Gelomen
 * 修复失败和错误用例里对应按钮的颜色
+
 Version 0.9.3 -- Gelomen
 * 修复点击失败或错误按钮后，浏览器版本和截图的列不会隐藏的bug
+
 Version 0.9.2 -- Gelomen
 * 美化 浏览器版本 和 截图 的显示
+
 Version 0.9.1 -- Gelomen
 * 使用UI自动化测试时，增加 错误、失败 详细信息的 浏览器类型和版本
+
 Version 0.9.0 -- Gelomen
 * 可通过 `need_screenshot=1` 作为开关，将报告开启截图功能
 * 增加 失败 和 错误 详细信息的 截图链接
+
 Version 0.8.4 -- Gelomen
 * 删除 失败模块 的显示
+
 Version 0.8.3 -- Gelomen
 * 修复 测试结果 的筛选
 * 优化 失败、错误 小图标的颜色
 * 增加表格 最后一列 的显示，以美化表格
+
 Version 0.8.2.1 -Findyou
 * 改为支持python3
+
 Version 0.8.2.1 -Findyou
 * 支持中文，汉化
 * 调整样式，美化（需要连入网络，使用的百度的Bootstrap.js）
 * 增加 通过分类显示、测试人员、通过率的展示
 * 优化“详细”与“收起”状态的变换
 * 增加返回顶部的锚点
+
 Version 0.8.2
 * Show output inline instead of popup window (Viorel Lupu).
+
 Version in 0.8.1
 * Validated XHTML (Wolfgang Borgert).
 * Added description of test classes and test cases.
+
 Version in 0.8.0
 * Define Template_mixin class for customization.
 * Workaround a IE 6 bug that it does not treat <script> block as CDATA.
+
 Version in 0.7.1
 * Back port to Python 2.3 (Frank Horowitz).
 * Fix missing scroll bars in detail log (Podi).
@@ -199,7 +236,9 @@ stderr_redirector = OutputRedirector(sys.stderr)
 class Template_mixin(object):
     """
     Define a HTML template for report customerization and generation.
+
     Overall structure of an HTML report
+
     HTML
     +------------------------+
     |<html>                  |
@@ -263,6 +302,7 @@ class Template_mixin(object):
 </head>
 <body >
 <script language="javascript" type="text/javascript">
+
     $(function(){
         // 修改 失败 和 错误 用例里对应按钮的颜色ClassName为动态加载 -- Gelomen
     	$("button").each(function () {
@@ -273,26 +313,30 @@ class Template_mixin(object):
                 $(this).addClass("btn-warning")
             }
         });
+
         // 给失败和错误合集加样式 -- Gelomen
         var p_attribute = $("p.attribute");
         p_attribute.eq(4).addClass("failCollection");
         p_attribute.eq(5).addClass("errorCollection");
+
         // 打开截图，放大，点击任何位置可以关闭图片  -- Gelomen
         $(".screenshot").click(function(){
             var img = $(this).attr("img");
             $('.pic_show img').attr('src', img);
             $('.pic_looper').fadeIn(200);
             $('.pic_show').fadeIn(200);
+
             var browserHeight = $(window).height();
             var pic_boxHeight = $(".pic_box").height();
             var top = (browserHeight - pic_boxHeight)/2;
             $('.pic_box').css("margin-top", top + "px")
+
         });
         $('.pic_looper, .pic_show').click(function(){
             $('.pic_looper').fadeOut(200);
             $('.pic_show').fadeOut(200)
         });
-
+        
         var browserWidth = $(window).width();
         var margin_left = browserWidth/2 - 450;
         if(margin_left <= 240){
@@ -300,12 +344,15 @@ class Template_mixin(object):
         }else {
             $("#container").css("margin-left", margin_left + "px");
         }
+
         $(window).resize(function(){
             // 改变窗口大小时，自动改变图片与顶部的距离  -- Gelomen
             var browserHeight = $(window).height();
             var pic_boxHeight = $(".pic_box").height();
             var top = (browserHeight - pic_boxHeight)/2;
             $('.pic_box').css("margin-top", top + "px");
+
+
             // 改变窗口大小时，自动改变饼图的边距  -- Gelomen
             var browserWidth = $(window).width();
             var margin_left = browserWidth/2 - 450;
@@ -315,6 +362,7 @@ class Template_mixin(object):
                 $("#container").css("margin-left", margin_left + "px");
             }
         });
+
         // 距离顶部超过浏览器窗口一屏时，回到顶部按钮才出现  -- Gelomen
         $(window).scroll(function(){
             var browserHeight = $(window).height();
@@ -325,12 +373,12 @@ class Template_mixin(object):
                 $("#toTop").css("display", "none")
             }
         })
-
+        
         // 增加回到顶部过程的动画，以看上去不会那么生硬  -- Gelomen
         $("#toTop").click(function() {
             $("html,body").animate({"scrollTop":0}, 700)
         })
-
+        
         // 增加饼状图  -- Gelomen
         $('#container').highcharts({
             chart: {
@@ -401,7 +449,7 @@ class Template_mixin(object):
             });
             chart = c;
         });
-
+        
         // 查看 失败 和 错误 合集链接文字切换  -- Gelomen
         $(".showDetail").click(function () {
             if($(this).html() == "点击查看"){
@@ -411,9 +459,10 @@ class Template_mixin(object):
             }
         })
     });
-
-
+    
+    
 output_list = Array();
+
 /*level 调整增加只显示通过用例的分类 --Findyou / 修复筛选显示bug --Gelomen
 0:Summary //all hiddenRow
 1:Failed  //pt&et hiddenRow, ft none
@@ -460,6 +509,7 @@ function showCase(level) {
             }
         }
     }
+
     //加入【详细】切换文字变化 --Findyou
     detail_class=document.getElementsByClassName('detail');
 	//console.log(detail_class.length)
@@ -474,6 +524,7 @@ function showCase(level) {
 		}
 	}
 }
+
 function showClassDetail(cid, count) {
     var id_list = Array(count);
     var toHide = 1;
@@ -508,6 +559,7 @@ function showClassDetail(cid, count) {
         }
     }
 }
+
 function html_escape(s) {
     s = s.replace(/&/g,'&amp;');
     s = s.replace(/</g,'&lt;');
@@ -518,6 +570,7 @@ function html_escape(s) {
 %(heading)s
 %(report)s
 %(ending)s
+
 </body>
 </html>
 """
@@ -536,10 +589,12 @@ table       { font-size: 100%; }
 .table tbody tr td{
             vertical-align: middle;
         }
+
 /* -- heading ---------------------------------------------------------------------- */
 .heading .description, .attribute {
     clear: both;
 }
+
 /* --- 失败和错误合集样式 -- Gelomen --- */
 .failCollection, .errorCollection {
     width: 100px;
@@ -551,10 +606,12 @@ table       { font-size: 100%; }
 #errorCaseOl li {
     color: orange
 }
+
 /* --- 打开截图特效样式 -- Gelomen --- */
 .data-img{
     cursor:pointer
 }
+
 .pic_looper{
     width:100%;
     height:100%;
@@ -566,6 +623,7 @@ table       { font-size: 100%; }
     display: none;
     z-index: 100;
 }
+
 .pic_show{
     width:100%;
     position:fixed;
@@ -578,6 +636,7 @@ table       { font-size: 100%; }
     display: none;
     z-index: 100;
 }
+
 .pic_box{
     padding:10px;
     width:90%;
@@ -586,6 +645,7 @@ table       { font-size: 100%; }
     text-align: center;
     overflow: hidden;
 }
+
 .pic_box img{
     width: auto;
     height: 100%;
@@ -593,12 +653,14 @@ table       { font-size: 100%; }
     -webkit-box-shadow: 0px 0px 20px 0px #000;
     box-shadow: 0px 0px 20px 0px #000;
 }
+
 /* --- 饼状图div样式 -- Gelomen --- */
 #container {
     width: 450px;
     height: 300px;
     float: left;
 }
+
 /* -- report ------------------------------------------------------------------------ */
 #total_row  { font-weight: bold; }
 .passCase   { color: #5cb85c; }
@@ -627,6 +689,7 @@ table       { font-size: 100%; }
 </div>
 <div id="container"></div>
 </div>
+
 """  # variables: (title, parameters, description)
 
     HEADING_ATTRIBUTE_TMPL = """<p class='attribute'><strong>%(name)s : </strong> %(value)s</p>
@@ -702,6 +765,7 @@ table       { font-size: 100%; }
     <!--默认收起错误信息 -Findyou
     <button id='btn_%(tid)s' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_%(tid)s'>%(status)s</button>
     <div id='div_%(tid)s' class="collapse">  -->
+
     <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
     <button id='btn_%(tid)s' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_%(tid)s,#div_%(tid)s_screenshot'>%(status)s</button>
     <div id='div_%(tid)s' class="collapse in">
@@ -723,6 +787,7 @@ table       { font-size: 100%; }
         <!--默认收起错误信息 -Findyou
         <button id='btn_%(tid)s' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_%(tid)s'>%(status)s</button>
         <div id='div_%(tid)s' class="collapse">  -->
+
         <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
         <button id='btn_%(tid)s' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_%(tid)s'>%(status)s</button>
         <div id='div_%(tid)s' class="collapse in">
@@ -1209,7 +1274,7 @@ class ReportDirectory(object):
             self.title = title
 
         # dir_path = self.path + self.title + "V" + str(round(i, 1))
-        dir_path = os.path.join(self.path, self.title + "V" + str(round(i, 1)))
+        dir_path = os.path.join( self.path,self.title + "V" + str(round(i, 1) ))
         # 判断文件夹是否存在，不存在则创建
         while True:
             is_dir = os.path.isdir(dir_path)
@@ -1224,7 +1289,7 @@ class ReportDirectory(object):
 
         # 测试报告路径
         # report_path = dir_path + "/" + self.title + "V" + str(round(i, 1)) + ".html"
-        report_path = os.path.join(dir_path, self.title + "V" + str(round(i, 1)) + ".html")
+        report_path = os.path.join( dir_path,self.title + "V" + str(round(i, 1)) + ".html" )
         # 将新建的 文件夹路径 和 报告路径 存入全局变量
         GlobalMsg.set_value("dir_path", dir_path)
         GlobalMsg.set_value("report_path", report_path)

@@ -8,23 +8,22 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
-from common.DoConfig import ReadConfig
+from common.configUtils import ConfigUtils
 from common.logger import Mylog
 
-logger = Mylog()
+logger = Mylog('To_Emil.py').getlog()
 
-my_sender = ReadConfig.read_config('Email', 'my_sender')
-my_pass = ReadConfig.read_config('Email', 'my_pass')
-my_user = ReadConfig.read_config('Email', 'my_user')
+my_sender = ConfigUtils().get_config_value('Email', 'my_sender')
+my_pass = ConfigUtils().get_config_value('Email', 'my_pass')
+my_user = ConfigUtils().get_config_value('Email', 'my_user')
 
 
-def ToEmail(sendmessage):
+def ToEmail(sendmsg):
     try:
-
         # 配置发送内容
-        msg = MIMEText(sendmessage, 'html', 'utf-8')
-        msg['From'] = formataddr(["TEST", my_sender])
-        msg['To'] = formataddr(["api-test", my_user])
+        msg = MIMEText(sendmsg, 'html', 'utf-8')
+        msg['From'] = formataddr(("TEST", my_sender))
+        msg['To'] = formataddr(("api-test", my_user))
         msg['Subject'] = "发送邮件测试"
         # 邮箱配置
         server = smtplib.SMTP_SSL("smtp.qq.com", 465)

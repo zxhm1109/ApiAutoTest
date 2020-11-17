@@ -5,17 +5,6 @@
 # @File      : spider.py
 # @desc      :
 
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Author    : zhaofy
-# @Datetime  : 2020/8/11 17:14
-# @File      : spider.py
-# @desc      :
-
-
-# !/usr/bin/python3
-# -*- coding: utf-8 -*-
-
 import requests
 from queue import Queue
 from threading import Thread as Task
@@ -150,8 +139,8 @@ class Spider():
 
 
 if __name__ == '__main__':
-    from common.DoYaml import DoYaml
-    url = DoYaml().read(section='url1')
+    from common.configUtils import yamlUtils
+    url = yamlUtils().read(section='url1')
     print(url)
     # spider = Spider(url['base_url'], url['headers'], url['data'])
     # spider.run()

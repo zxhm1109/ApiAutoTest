@@ -11,7 +11,7 @@ from common.logger import Mylog
 from common.DoExcel import doexcel
 
 '''获取新氧类目列表，并写入excel'''
-logger = Mylog()
+logger = Mylog('demo1').getlog()
 driver = webdriver.Chrome(r'C:\myworkfile\py_package\chromedriver.exe')
 driver.get('https://www.soyoung.com/itemk/')
 driver.maximize_window()
@@ -176,3 +176,23 @@ if __name__ == '__main__':
 
 
 import logging'''
+
+'''is9000_path = (r'C:\Users\ai013\Desktop\9000服务商（截止2020.8.16）.xlsx', 1)  # flag =1
+not9000_path = (r'C:\Users\ai013\Desktop\合作店明细（截止2020.8.16）.xlsx', 0)  # flag =0
+phonelist1, f = read_excel(*not9000_path)
+num=0
+for phone in phonelist1:
+    num1=asertuser(phone, f)
+    num+=num1
+print(num)
+print(len(phonelist1))
+phonelist2, f1 = read_excel(*is9000_path)
+print(phonelist1)
+print(phonelist2)
+repetition = []
+for i in phonelist1:
+    for ii in phonelist2:
+        if i == ii:
+            repetition.append(i)
+print(repetition)
+'''

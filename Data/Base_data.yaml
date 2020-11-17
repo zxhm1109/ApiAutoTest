@@ -2,22 +2,7 @@ database:
   uaa: 'ssxq-user-center'
   product: 'ssxq-product-center'
 
-
-url1:
-  base_url: "https://t2javaapi.sancell.top/order/create"
-    headers:
-      User-Agent: "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.1911180 MicroMessenger/7.0.4 Language/zh_CN webview/"
-      Referer: "https://servicewechat.com/wx0cb916b177b454f4/devtools/page-frame.html"
-      we-app: "ssxq-mini"
-      we-plat-id: "SSBM"
-      wx-token: "fake_mem:1597113731949-0"
-    data: '{"corp_id":"0999","pay_content":"MONEY","note":"","cart":[{"sarti_id":"f6fe5590a17c4264a69c67a561f289c4","qty":1}]}'
-
-url2:
-  base_url: "https://t2wxapi.sancell.top/ssxq/w/pay/wxpay?salebill_id=${salebill}"
-    headers:
-      User-Agent: "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.02.1911180 MicroMessenger/7.0.4 Language/zh_CN webview/"
-      Referer: "https://servicewechat.com/wx0cb916b177b454f4/devtools/page-frame.html"
-      we-app: "ssxq-mini"
-      we-plat-id: "SSBM"
-      wx-token: "fake_mem:1597113731949-0"
+timestamp: '1605609890'
+timestamp: '1605609890'
+timestamp: '1605609973'
+timestamp: '1605609973'
