@@ -8,15 +8,11 @@
 import unittest, urllib3
 from ddt import ddt, data
 from common.requestUtils import RequestUtils
-from common.excelUtils import ExcelUtils
 from common.dataUtils import *
-from common.logger import Mylog
 import datetime, time
 from common.configUtils import *
 
-# from common.Assert import Assert
-# # from common.redis_connect import *
-# from common.postgre_connect import PosrgreConn
+
 
 logger = Mylog('TestHttpRequest.py').getlog()
 # 读取deploy.ini文件excel_case（执行哪些sheet）
