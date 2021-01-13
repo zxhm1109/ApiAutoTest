@@ -5,10 +5,11 @@
 # @File      : Assert.py
 # @desc      :
 
-import json
+import json, jsonpath
 import re
 import ast
 from common.logger import Mylog
+from common.dbUtils import PostgreConn
 
 log = Mylog(logger='Assert.py').getlog()
 
@@ -23,7 +24,8 @@ class CheckUtils:
             'json键是否存在': self.check_key,
             'json键值对': self.check_keyvalue,
             '正则匹配': self.check_regexp,
-            'in': self.check_str_in
+            'in': self.check_str_in,
+            'sql': self.check_sql_equal,
         }
         self.pass_result = {
             'code': 0,
@@ -131,16 +133,47 @@ class CheckUtils:
             # log.error('用例执行失败，%s校验未通过' % check_data)
             return self.fail_result
 
-    def check_str_in(self, check_data=None):
+    def check_str_in(self, check_data=None, sql=None):
         """验证返回结果是否包含期望的结果"""
-        log.info(self.ck_response.text)
         try:
             if check_data in self.ck_response.text:
+                self.pass_result['message'] += '：{} in {}'.format(check_data, self.ck_response.text)
+                log.info('断言成功：{} in {}'.format(check_data, self.ck_response.text))
                 return self.pass_result
             else:
+                self.fail_result['message'] += '：{} not in {}'.format(check_data, self.ck_response.text)
+                log.info('断言失败：{} not in {}'.format(check_data, self.ck_response.text))
                 return self.fail_result
-        except:
+        except Exception as e:
+            self.fail_result['message'] = '断言执行出错：{}'.format(e)
             log.error("断言Fail，不包含或者body错误，body： %s,expected_body： %s" % (self.ck_response.text, check_data))
+            return self.fail_result
+
+    def check_sql_equal(self, data, sql):
+        count = 0
+        if '=sql' in data:
+            try:
+                get_value_code_list = data.split(";")
+                for ii in range(0, len(get_value_code_list)):
+                    iii = get_value_code_list[ii].split("=")
+                    value = jsonpath.jsonpath(self.ck_response.json(), iii[0])[-1]
+                    count = str(value)
+            except Exception as e:
+                self.fail_result['message'] += '断言执行出错：{}'.format(e)
+                log.error("发生错误，%s" % e)
+
+        try:
+            count_sql = PostgreConn().SelectOperate(sql)[0][0]
+            if int(count) == int(count_sql):
+                self.pass_result['message'] += '：{} = {}'.format(count, count_sql)
+                log.info('断言成功：{} in {}'.format(count_sql, count))
+                return self.pass_result
+            else:
+                self.pass_result['message'] += '：{} != {}'.format(count, count_sql)
+                log.error("断言Fail，sql结果与response不相等，body： %s,expected_body： %s" % (count, count_sql))
+                return self.fail_result
+        except Exception as e:
+            self.pass_result['message'] = '断言执行出错：{}'.format(e)
             return self.fail_result
 
     def assert_code(self, code, expected_code):
@@ -189,9 +222,9 @@ class CheckUtils:
             return False
         return True
 
-    def run_check(self, check_type=None, check_data=None):
+    def run_check(self, check_type=None, sql=None, check_data=None):
         if check_type in self.ck_rules.keys():
-            result = self.ck_rules[check_type](check_data)  # self.check_keyvalue(check_data)
+            result = self.ck_rules[check_type](check_data, sql)  # self.check_keyvalue(check_data)
             return result
         else:
             self.fail_result['message'] = '不支持%s判断方法' % check_type

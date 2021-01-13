@@ -11,7 +11,7 @@ from common.path_os import file_path
 from common.logger import Mylog
 import yaml
 
-log = Mylog('configUtils').getlog()
+log = Mylog('configUtils.py').getlog()
 
 
 class ConfigUtils:
@@ -31,8 +31,6 @@ class ConfigUtils:
         # 根据标签获取所有options
         valuelist = self.get_config_value(sec, section)
         a = valuelist.lstrip('[').rstrip(']').split(',')
-        print(sheets)
-        print(a)
         options = self.cf.options(section)
         result = []
         for opt in options:
@@ -117,5 +115,5 @@ if __name__ == '__main__':
     # a = sheets.lstrip('[').rstrip(']').split(',')
     # print(sheets)
     # print(a)
-    a=yamlUtils().read('wx-token')
+    a=ConfigUtils().get_config_dict('Base')['env']
     print(a)

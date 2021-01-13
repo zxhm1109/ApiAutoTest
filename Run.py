@@ -5,7 +5,6 @@
 # @File      : Run.py
 # @desc      :
 
-from common import HTMLTestRunnerNew
 import unittest
 from common.logger import Mylog
 from common.To_Emil import ToEmail
@@ -48,7 +47,6 @@ class Run:
                 else:
                     pass
 
-    #
     def load_testsuite(self):
         discover = unittest.defaultTestLoader.discover(
             start_dir=self.case_path,
@@ -76,10 +74,10 @@ class Run:
         fp.close()
 
         # 生成测试报告并发送至邮箱
-        with open(self.report_path, 'rb') as f:
-            mail_boby = f.read()
-        ToEmail(mail_boby)
-        logger.info('HTML测试报告地址：{}'.format(self.report_path))
+        # with open(self.report_path, 'rb') as f:
+        #     mail_boby = f.read()
+        # ToEmail().sendemail(mail_boby)
+        # logger.info('HTML测试报告地址：{}'.format(self.report_path))
 
 
 # def run_all():

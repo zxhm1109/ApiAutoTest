@@ -49,17 +49,20 @@ class RequestUtils:
         }
         # self.temporary_variables = {}
 
-    def temporary_variables(self, rw, kw):
+    def temporary_variables(self, rw, kw=None):
+        temporary_variables = getattr(transfer_data, 'temporary_variables')
         if rw == 'w':
-            setattr(transfer_data, 'temporary_variables', kw)
+            data = dict(temporary_variables, **kw)
+            setattr(transfer_data, 'temporary_variables', data)
+            log.info("当前存储数据：%s" % (getattr(transfer_data, 'temporary_variables')))
         else:
-            getattr(transfer_data, 'temporary_variables')
+            return temporary_variables
 
     def headerUtils(self, case_info):
         '''判断是否需要补充请求头信息'''
         if case_info['是否补充请求头']:
-            log.info('11中转数据temporary_variables：{}'.format(self.temporary_variables('r', 'wx-token')))
-            self.headers['wx-token'] = self.temporary_variables('r', 'wx-token')
+            log.info('11中转数据temporary_variables：{}'.format(self.temporary_variables('r')['wx-token']))
+            self.headers['wx-token'] = self.temporary_variables('r')['wx-token']
             log.info('请求头信息更新，目前请求头信息为：%s' % self.headers)
         else:
             log.info('请求头信息保持不变，目前请求头信息为：%s' % self.headers)
@@ -92,7 +95,6 @@ class RequestUtils:
         '''处理响应数据（提取数据参数化）'''
         if case_info["取值变量"]:
             try:
-                log.info("取值：{},{}".format(case_info["取值变量"], res))
                 get_value_code_list = case_info["取值变量"].split(";")
                 dic = {}
                 for ii in range(0, len(get_value_code_list)):
@@ -100,37 +102,19 @@ class RequestUtils:
                     value = jsonpath.jsonpath(res.json(), iii[1])[-1]
                     dic[iii[0]] = str(value)
                     self.temporary_variables('w', dic)
-                    log.info("取值：{},{}".format(self.temporary_variables('r', "wx-token"), res))
+                    log.info("取值：{},{}".format(case_info["取值变量"], value))
             except Exception as e:
                 log.error("发生错误，%s" % e)
-        # elif case_info["取值方式"] == "正则取值":
-        #     try:
-        #         get_value_code_list = case_info["取值代码"].split(";")
-        #         log.info('get_value_code_list = %s' % get_value_code_list)
-        #         transfer_value_variable_list = case_info["传值变量"].split(";")
-        #         log.info('transfer_value_variable_list = %s' % transfer_value_variable_list)
-        #         for i in range(0, len(get_value_code_list)):
-        #             # log.info('i = %d' % i)
-        #             log.info("取值代码为：%s" % get_value_code_list[i])
-        #             try:
-        #                 value = re.findall(get_value_code_list[i], res.text)[-1]
-        #                 log.info('value = %s' % value)
-        #                 self.temporary_variables[transfer_value_variable_list[i]] = value
-        #             except IndexError as e:
-        #                 log.error("无法依据正则表达式匹配到值")
-        #     except Exception as e:
-        #         log.error("发生错误，%s" % e)
         else:
-            pass
+          pass
 
     def sendrequest(self, case_info):
         self._addTimeStampToTemp()
         self.processRequestData(case_info)
-        log.info("取值代码为：%s" % case_info['取值变量'])
         url = ConfigUtils().get_config_value('Base', 'host') + case_info['请求地址']
         self.headerUtils(case_info)
-        log.info('请求方式为：%s\n请求地址为：%s?%s\n请求参数为：%s' % (
-            case_info['请求方式'], url, case_info['请求参数'], case_info['请求参数']))
+        log.info('请求方式为：%s\n请求地址为：%s\n请求参数为：%s' % (
+            case_info['请求方式'], url, case_info['请求参数']))
         try:
             if case_info["请求方式"].upper() == "GET":
                 geturl = url + '?' + case_info['请求参数']
@@ -191,18 +175,13 @@ class RequestUtils:
 
     def checkreuqst(self, case_info):
         log.info("case_info:{}".format(case_info))
-        log.info("开始执行步骤%s：%s" % (case_info['测试用例编号'], case_info['测试用例名称']))
         res = self.sendrequest(case_info)
         self.processResponseData(case_info, res)
-        # log.info('此时变量有：%s' % self.temporary_variables)
-        result = CheckUtils(res).run_check(case_info['期望结果类型'], case_info['期望结果'])
-        if not result.get('check_result'):
-            log.error("步骤\"%s:%s\"执行失败" % (case_info['测试用例编号'], case_info['测试用例名称']))
+        result = CheckUtils(res).run_check(case_info['断言类型'], case_info['sql'], case_info['期望结果'])
         return result
 
     def request_by_step(self, case_infos):
         temp_result_list = []
-        # for case_info in case_infos:
         temp_result = self.checkreuqst(case_infos)
         temp_result_list.append(temp_result)
         return temp_result_list
@@ -224,9 +203,3 @@ if __name__ == '__main__':
         data = DataUtils(sheet).testCaseDataList()
         rr = RequestUtils().request_by_step(data)
         print(rr)
-
-    url = 'https://t2wxapi.sancell.top/ssxq/w/auth/appPhoneLogin'
-    parms = "{'phone': '16621080711', 'referrer_mem_id': '', 'ver_code': '8888'}"
-    res = requests.post(url, parms)
-    a = json.loads(parms)
-    print(a)

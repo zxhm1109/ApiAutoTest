@@ -16,10 +16,10 @@ log = Mylog('dbUtils.py').getlog()
 
 
 class PostgreConn:
-    '''Postgre数据库sql操作'''
+    """Postgre数据库sql操作"""
 
-    def __init__(self, env):
-        self.env = env
+    def __init__(self, env=None):
+        self.env = env if env else ConfigUtils().get_config_dict('Base')['env']
         if 'test' in self.env:
             self.DBconn = ConfigUtils().get_config_dict('test_database')
         elif 'pre' in self.env:
@@ -27,7 +27,14 @@ class PostgreConn:
         else:
             raise ValueError('postgre配置查询错误！请检查conf文件env配置')
 
+    def runsql(self, sql):
+        conn = psycopg2.connect(database="jhsaas", user=self.DBconn['user'], password=self.DBconn['password'],
+                                host=self.DBconn['host'], port=self.DBconn['port'])
+        cur = conn.cursor()
+        cur.execute(sql)
+
     def SelectOperate(self, sql):
+        print(self.DBconn)
         conn = psycopg2.connect(database="jhsaas", user=self.DBconn['user'], password=self.DBconn['password'],
                                 host=self.DBconn['host'], port=self.DBconn['port'])
         cur = conn.cursor()
@@ -39,13 +46,14 @@ class PostgreConn:
 
 
 class mysqlconn:
-    '''mysql数据库sql操作'''
+    """mysql数据库sql操作"""
+
     def __init__(self):
         self.host = ConfigUtils().get_config_value('mysql', 'host')
         self.user = ConfigUtils().get_config_value('mysql', 'user')
         self.password = ConfigUtils().get_config_value('mysql', 'password')
 
-    def connect_mysql(self, database, sql):
+    def SelectOperate(self, database, sql):
         connect = pymysql.connect('192.168.200.104', self.user, self.password, database, port=3306)
         cursor = connect.cursor()
         # 执行sql
@@ -59,7 +67,8 @@ class mysqlconn:
 
 
 class RedisConn:
-    '''redis数据库查询操作'''
+    """redis查询操作"""
+
     def __init__(self, env):
         self.env = env
         if 'test' in self.env:
@@ -70,6 +79,7 @@ class RedisConn:
             raise ValueError('redis配置查询错误！请检查conf文件env配置')
 
     def redis_conn(self, key):
+        print(self.redisconn)
         conn = redis.Redis(host=self.redisconn['host'], port=self.redisconn['port'], password=self.redisconn['password'], db=1)
         result = conn.get(key)
         return result
@@ -87,7 +97,20 @@ class RedisConn:
         log.info('短信验证码：{}'.format(int(b)))
         return b
 
+    def get_all_wxtoken(self):
+        # 获取所有wx-token，输出list
+        conn = redis.Redis(host=self.redisconn['host'], port=self.redisconn['port'], password=self.redisconn['password'], db=1)
+        result = conn.keys()
+        token = []
+        for res in result:
+            res = str(res)
+            if 'WXID' in res:
+                wxtoken = res.split(":")[2][:-1]
+                token.append(wxtoken)
+        print(token)
+
 
 if __name__ == '__main__':
-    a = RedisConn('test').get_phone_verify('17777777771')
-    print(a)
+    # RedisConn('pre').get_all_wxtoken()
+    a=PostgreConn().SelectOperate('SELECT count(*) FROM tb_mf_live_batch where live_status =1')
+    print(a[0])

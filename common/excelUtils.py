@@ -46,15 +46,16 @@ class ExcelUtils:
         logger.info('Excel读取测试用例：{}'.format(test_data))
         return test_data
 
-    def WriteExcel(self, sheet_name, row, value='None', col=11):
+    @staticmethod
+    def WriteExcel(sheet_name, row, value='None', col=11):
         # 打开excel文件
-        wb = load_workbook(self.casefile)
+        wb = load_workbook(ExcelUtils.casefile)
         # 打开excel表单
         sheet = wb[sheet_name]
         # 对应行列写入数据
         sheet.cell(row, col).value = value
         try:
-            wb.save(self.casefile)
+            wb.save(ExcelUtils.casefile)
             logger.info('数据成功！:{} -> {}[{}] '.format(value, sheet_name, row))
         except Exception as e:
             logger.error('数据失败！:{} -> {}[{}],失败原因：{} '.format(value, sheet_name, row, e))

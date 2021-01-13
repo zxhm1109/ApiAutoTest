@@ -17,12 +17,6 @@ class DataUtils:
     def __init__(self, sheet_name):
         self.sheet_names = sheet_name
 
-    # def getTestCaseData(self):
-    #     testCaseDict = {}
-    #     for row_data in self.testData:
-    #         testCaseDict.setdefault(row_data['测试用例编号'], []).append(row_data)
-    #     return testCaseDict
-
     def testCaseDataList(self):
 
         testCaseList = []
